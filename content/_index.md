@@ -8,11 +8,11 @@ chapter: false
     
 # Internship Report
 ### Student Information:
-&emsp; **Full Name:** Nguyen Hoang Thong
+&emsp; **Full Name:** Nguyen Cong Vinh
 
-&emsp; **Phone Number:** 0975099324
+&emsp; **Phone Number:** 0946311901
 
-&emsp; **Email:** thong.nguyenkallidus@hcmut.edu.vn
+&emsp; **Email:** vinh.nguyencong@hcmut.edu.vn
 
 &emsp; **University:** Ho Chi Minh City University of Technology
 
