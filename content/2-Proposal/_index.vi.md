@@ -4,106 +4,125 @@ date: 2024-01-01
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
-includeInReport: false
+includeInReport: true
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
+# Hạ tầng LMS 3 Tầng Doanh nghiệp trên AWS với Terraform
+## Tự động hóa, Bảo mật và Mở rộng Hạ tầng Cloud cùng Quy trình CI/CD
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+### 1. Tóm tắt
+Bản đề xuất này trình bày chi tiết việc thiết kế và triển khai tự động hạ tầng cloud 3 tầng đạt chuẩn doanh nghiệp trên Amazon Web Services (AWS) cho **Hệ thống Quản lý Học tập (LMS)**. Sử dụng **Terraform Infrastructure as Code (IaC)**, giải pháp tự động khởi tạo môi trường có tính sẵn sàng cao, bảo mật và khả năng mở rộng linh hoạt, phục vụ ứng dụng web tĩnh React/Vite (Single Page Application) cùng hệ thống API backend Node.js/Express cho sinh viên và giảng viên đại học.
 
-### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+Giải pháp tích hợp **AWS Amplify Hosting** để phân phối ứng dụng frontend toàn cầu, **AWS API Gateway HTTP API** làm proxy đảo HTTPS quản lý, **Regional AWS WAF v2** bảo mật ứng dụng web, **Application Load Balancer (ALB)** kết hợp **EC2 Auto Scaling Group (ASG)** trong các private subnet, **RDS MySQL (Multi-AZ)**, **ElastiCache Redis**, **DynamoDB**, và quy trình tự động hóa **GitHub Actions CI/CD pipelines**.
 
-### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+---
 
-*Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+### 2. Chủ đề
 
-*Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+#### Vấn đề hiện tại
+1. **Khởi tạo Thủ công & Khó Nhân bản**: Việc khởi tạo máy chủ thủ công trên giao diện AWS Management Console dễ dẫn đến sai lệch cấu hình, lỗi con người và mất nhiều thời gian khi cần nhân bản môi trường.
+2. **Rủi ro Bảo mật**: Đặt các máy chủ EC2 trực tiếp trong public subnet và mở port SSH 22 tiềm ẩn nguy cơ tấn công rất lớn. Ngoài ra, kết nối HTTP trực tiếp gây ra lỗi **Mixed Content** bị trình duyệt chặn khi frontend gọi từ HTTPS.
+3. **Điểm Lỗi Đơn lẻ (Single Point of Failure)**: Mô hình máy chủ đơn lẻ dễ bị gián đoạn dịch vụ khi lưu lượng truy cập tăng đột biến hoặc máy chủ gặp sự cố phần cứng.
+4. **Gián đoạn khi Cập nhật Code**: Cập nhật code thủ công yêu cầu dừng máy chủ, gây gián đoạn cho sinh viên khi đang làm bài thi hoặc xem tài liệu.
 
-### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+#### Giải pháp Đề xuất
+Đề xuất giải pháp tự động hóa bằng **Infrastructure as Code (IaC)** xây dựng trên **Terraform**:
+- **Không Lộ IP Công khai cho Máy chủ**: Các máy chủ EC2 nằm hoàn toàn trong private subnet và không có IP công khai. Quản trị máy chủ thông qua **AWS SSM Session Manager** (không cần quản lý khóa SSH hay mở port 22).
+- **Bảo mật Biên & Gateway Quản lý**: **AWS WAF v2 (Regional)** bảo vệ ALB trước các tấn công OWASP Top 10, bad inputs và DDoS rate-limiting. **AWS API Gateway** cung cấp endpoint HTTPS tự động (`https://<api-id>.execute-api.us-east-1.amazonaws.com`) loại bỏ hoàn toàn lỗi Mixed Content.
+- **Hosting Frontend Toàn cầu**: **AWS Amplify Hosting** phục vụ giao diện React/Vite qua mạng lưới CDN toàn cầu với quản lý chứng chỉ SSL tự động.
+- **Tính Sẵn sàng Cao & Mở rộng Tự động**: RDS MySQL Multi-AZ, ElastiCache Redis cluster, và EC2 Auto Scaling Group tự động co giãn theo tải CPU.
+- **Tự động hóa CI/CD**: GitHub Actions tự động deploy frontend lên Amplify và thực thi rolling instance refresh không gián đoạn dịch vụ cho backend.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+---
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+#### Dịch vụ AWS & Modules Terraform Chính
+- **Mạng & Bảo mật**: VPC, Public/Private/Database Subnets trên 2 AZs, Internet Gateway, NAT Gateways, Security Groups, IAM Roles (`vpc.tf`, `security_groups.tf`, `iam.tf`).
+- **Web Application Firewall**: Regional AWS WAF v2 Web ACL với các luật OWASP Top 10, Bad Inputs, IP Reputation và Rate Limiting (`waf.tf`).
+- **Hosting Frontend**: AWS Amplify Hosting cho React/Vite SPA với quy tắc điều hướng SPA (`amplify.tf`).
+- **API Gateway**: HTTP API làm proxy HTTPS quản lý cho ALB (`apigateway.tf`).
+- **Tính toán & Cân bằng tải**: Application Load Balancer, Launch Template, EC2 Auto Scaling Group với SSM managed instance profile (`alb.tf`, `ec2.tf`).
+- **Dữ liệu & Lưu trữ**: RDS MySQL Multi-AZ (`rds.tf`), ElastiCache Redis (`redis.tf`), DynamoDB 5 bảng (`dynamodb.tf`), S3 Private Buckets (`s3.tf`) kết hợp S3 & DynamoDB VPC Gateway Endpoints.
+- **Giám sát & Ghi log**: CloudWatch Log Groups và CloudWatch Alarm theo dõi chỉ số CPU (`cloudwatch.tf`).
 
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+---
 
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+### 4. Giai đoạn Triển khai Kỹ thuật
 
-### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+| Giai đoạn | Mốc công việc / Nhiệm vụ | Thời gian |
+| :--- | :--- | :--- |
+| **Giai đoạn 1: Kiến trúc & Thiết kế IaC** | Nghiên cứu kiến trúc 3 tầng AWS, thiết kế cấu trúc module HCL, định nghĩa biến (`variables.tf`) | Tuần 1 - 2 |
+| **Giai đoạn 2: Cấu hình VPC & Bảo mật** | Viết code Terraform cho VPC, subnets đa AZ, NAT Gateways, IAM roles, security groups, Regional WAF v2 và API Gateway | Tuần 3 |
+| **Giai đoạn 3: Khởi tạo Cơ sở dữ liệu & Máy chủ** | Provision RDS MySQL Multi-AZ, ElastiCache Redis, DynamoDB tables, S3 private buckets với VPC Endpoints, EC2 Launch Template và ASG | Tuần 4 |
+| **Giai đoạn 4: Amplify Frontend & Bootstrap Máy chủ** | Cấu hình `amplify.tf`, viết script `user_data.tftpl` cho EC2 (Node.js 20, PM2, S3 artifact pull), kiểm tra kết nối HTTP/HTTPS | Tuần 5 |
+| **Giai đoạn 5: CI/CD Pipeline & Kiểm thử** | Xây dựng GitHub Actions workflows cho Amplify frontend release và ASG rolling refresh; chạy smoke tests và viết tài liệu | Tuần 6 |
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+---
 
-### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+### 5. Ước tính Ngân sách
 
-### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+Ước tính chi phí hàng tháng theo bảng giá AWS (region us-east-1), dự tính cho **40,000 registered users** (~8,000 DAU, ~7.2 triệu API requests/tháng, ~2 TB frontend bandwidth/tháng):
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+#### Tier 1 — Compute & Load Balancing
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+| Dịch vụ AWS | Chi tiết Cấu hình | Chi phí/tháng (USD) |
+| :--- | :--- | :--- |
+| **EC2 Auto Scaling** | 2–4 × `t3.medium` instances (trung bình 2.5 instances) | ~$75.92 |
+| **EBS Storage (gp3)** | 30 GB/instance × 2.5 instances | ~$6.00 |
+| **Application Load Balancer** | 1 ALB (fixed + ~2.5 LCU data processing) | ~$31.03 |
+| **NAT Gateways** | 2 NAT Gateways (1/AZ, always-on) + ~50 GB processed | ~$67.95 |
+| **Public IPv4 Addresses** | 4 IPs (2 NAT EIPs + 2 ALB IPs) | ~$14.60 |
+| **VPC Gateway Endpoints** | S3 & DynamoDB (free of charge) | $0.00 |
+| | **Tier 1 Subtotal** | **~$195.50** |
 
-### 7. Đánh giá rủi ro  
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+#### Tier 2 — Database & Storage
 
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+| Dịch vụ AWS | Chi tiết Cấu hình | Chi phí/tháng (USD) |
+| :--- | :--- | :--- |
+| **RDS MySQL Multi-AZ** | `db.t4g.micro`, 20 GB gp3 storage, 7-day backup | ~$25.66 |
+| **ElastiCache Redis** | `cache.t4g.micro`, 2-node (primary + replica) | ~$23.36 |
+| **DynamoDB (5 tables)** | On-Demand, PITR enabled (~12M writes + 48M reads/tháng) | ~$15.75 |
+| **Amazon S3** | 3 private buckets, ~20 GB storage | ~$1.50 |
+| | **Tier 2 Subtotal** | **~$66.27** |
 
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+#### Tier 3 — Security, Frontend Hosting & Monitoring
 
-### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+| Dịch vụ AWS | Chi tiết Cấu hình | Chi phí/tháng (USD) |
+| :--- | :--- | :--- |
+| **AWS WAF v2 (Regional)** | 1 Web ACL + 3 Managed Rule Groups + 1 Rate Limit rule + 7.2M requests | ~$13.32 |
+| **AWS Amplify Hosting** | React/Vite SPA, ~2,000 GB bandwidth @ $0.15/GB | ~$300.00 |
+| **API Gateway HTTP API** | 7.2M requests @ $1.00/1M | ~$7.20 |
+| **VPC Interface Endpoints (SSM)** | 3 endpoints × 2 AZs = 6 ENIs @ $0.01/hr | ~$43.80 |
+| **CloudWatch** | 3 alarms + ~10 GB log ingestion | ~$5.30 |
+| **IAM** | Roles & Policies | $0.00 |
+| | **Tier 3 Subtotal** | **~$369.62** |
+
+#### Tổng Chi phí Ước tính Hàng tháng
+
+| | Chi phí/tháng (USD) |
+| :--- | :--- |
+| Tier 1 — Compute & Load Balancing | $195.50 |
+| Tier 2 — Database & Storage | $66.27 |
+| Tier 3 — Security, Frontend & Monitoring | $369.62 |
+| **Tổng Chi phí Ước tính** | **~$631.39 / tháng** |
+
+*Lưu ý: Chi phí lớn nhất là Amplify Hosting bandwidth (~$300, chiếm 47.5% tổng chi phí). Chuyển sang CloudFront + S3 static hosting có thể giảm bandwidth cost xuống ~$170/tháng. Compute Savings Plans và Reserved Instances cho EC2/RDS/Redis có thể tiết kiệm thêm 30–50%. Khi thực hành workshop, chi phí có thể giảm về gần $0 bằng cách tear down tài nguyên với `terraform destroy`.*
+
+---
+
+### 6. Đánh giá Rủi ro & Chiến lược Giảm thiểu
+
+| Rủi ro Ghi nhận | Mức độ Ảnh hưởng | Xác suất | Chiến lược Giảm thiểu |
+| :--- | :--- | :--- | :--- |
+| **Lỗi Bảo mật Mixed Content trên Trình duyệt** | Cao | Cao | Triển khai **AWS API Gateway HTTP API** cung cấp endpoint HTTPS, chuyển tiếp an toàn tới ALB. |
+| **Tấn công Tấn công DDoS hoặc Bot Độc hại** | Cao | Trung bình | Khởi tạo **Regional AWS WAF v2** với các luật giới hạn tần suất (2,000 req/5phút) và OWASP Top 10. |
+| **Máy chủ EC2 Cập nhật Lỗi hoặc Quá tải** | Cao | Trung bình | Cấu hình **EC2 Auto Scaling Group** kết hợp CloudWatch alarm tự động co giãn và kiểm tra health check. |
+| **Chi phí Phát sinh Ngoài ý muốn** | Trung bình | Thấp | Cấu hình CloudWatch billing alert và script tự động xóa hạ tầng bằng `terraform destroy`. |
+
+---
+
+### 7. Kết quả Kỳ vọng
+
+1. **100% Infrastructure as Code**: Khởi tạo toàn bộ hạ tầng cloud doanh nghiệp trong khoảng ~15 phút bằng `terraform apply`.
+2. **Quy trình CI/CD Không Gián đoạn**: Tự động hóa hoàn toàn quy trình deploy cho Amplify frontend và ASG rolling instance refresh backend.
+3. **Tiêu chuẩn Bảo mật Cao**: EC2 nằm hoàn toàn trong private subnet, truy cập máy chủ qua SSM Session Manager, bảo vệ bởi Regional WAF và HTTPS toàn trình.
+4. **Bộ Tài liệu Workshop Hoàn chỉnh**: Tài liệu workshop Hugo và nhật ký công việc (worklog) chi tiết, sẵn sàng cho việc mở rộng nhóm và làm tài liệu tham khảo học thuật.

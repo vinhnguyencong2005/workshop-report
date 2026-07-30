@@ -8,7 +8,7 @@ pre : " <b> 5.5.5. </b> "
 
 Các trình duyệt web hiện đại áp dụng chính sách bảo mật **Mixed Content**: khi ứng dụng frontend được tải qua kết nối an toàn `https://` (như trên AWS Amplify), trình duyệt sẽ **chặn hoàn toàn** bất kỳ lệnh gọi API không an toàn `http://` nào.
 
-Để cung cấp một endpoint HTTPS quản lý cho Application Load Balancer mà không yêu cầu xác minh tên miền hoặc chứng chỉ SSL thủ công, chúng ta khởi tạo một **AWS API Gateway HTTP API** (`apigateway.tf`).
+Để cung cấp một endpoint HTTPS quản lý cho Application Load Balancer mà không yêu cầu xác minh tên miền hoặc chứng chỉ SSL thủ công, hệ thống khởi tạo một **AWS API Gateway HTTP API** (`apigateway.tf`).
 
 #### 1. Tài nguyên API Gateway HTTP API (`apigateway.tf`)
 

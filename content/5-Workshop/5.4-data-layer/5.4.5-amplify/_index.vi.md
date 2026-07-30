@@ -8,7 +8,7 @@ pre : " <b> 5.4.5. </b> "
 
 AWS Amplify Hosting cung cấp phân phối CDN toàn cầu, chứng chỉ HTTPS SSL tự động, và các quy tắc rewrite cho ứng dụng Single Page Application (SPA) khi hosting ứng dụng web frontend (React, Vue, Vite).
 
-Trong kiến trúc của chúng ta, AWS Amplify host ứng dụng frontend tĩnh và truyền biến môi trường `VITE_API_BASE_URL` trỏ đến endpoint HTTPS API Gateway backend.
+Trong kiến trúc này, AWS Amplify host ứng dụng frontend tĩnh và truyền biến môi trường `VITE_API_BASE_URL` trỏ đến endpoint HTTPS API Gateway backend.
 
 #### 1. Amplify App (`amplify.tf`)
 

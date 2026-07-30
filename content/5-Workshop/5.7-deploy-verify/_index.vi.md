@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 5.7. </b> "
 ---
 
-Sau khi tất cả các file cấu hình Terraform (`provider.tf`, `vpc.tf`, `security_groups.tf`, `iam.tf`, `s3.tf`, `waf.tf`, `amplify.tf`, `apigateway.tf`, `rds.tf`, `redis.tf`, `dynamodb.tf`, `ec2.tf`, `alb.tf`, `cloudwatch.tf`, `outputs.tf`) đã sẵn sàng, chúng ta sẽ khởi tạo toàn bộ hạ tầng và kiểm tra hoạt động của các dịch vụ.
+Sau khi tất cả các file cấu hình Terraform (`provider.tf`, `vpc.tf`, `security_groups.tf`, `iam.tf`, `s3.tf`, `waf.tf`, `amplify.tf`, `apigateway.tf`, `rds.tf`, `redis.tf`, `dynamodb.tf`, `ec2.tf`, `alb.tf`, `cloudwatch.tf`, `outputs.tf`) đã sẵn sàng, tiến hành khởi tạo toàn bộ hạ tầng và kiểm tra hoạt động của các dịch vụ.
 
 ---
 

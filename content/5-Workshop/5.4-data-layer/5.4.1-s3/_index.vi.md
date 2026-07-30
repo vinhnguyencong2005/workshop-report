@@ -16,7 +16,7 @@ Ba buckets, mỗi bucket có hình thức truy cập khác nhau:
 
 #### S3 VPC Gateway Endpoint
 
-Trước khi tạo các buckets, chúng ta thêm một Gateway endpoint để lưu lượng S3 từ các private subnets đi trên hạ tầng AWS backbone:
+Trước khi tạo các buckets, hệ thống bổ sung một Gateway endpoint để lưu lượng S3 từ các private subnets đi trên hạ tầng AWS backbone:
 
 ```hcl
 data "aws_prefix_list" "s3" {
@@ -34,7 +34,7 @@ resource "aws_vpc_endpoint" "s3" {
 
 Gateway endpoints hoàn toàn miễn phí — chúng hoạt động bằng cách thêm tuyến đường vào route table. Bất kỳ lưu lượng nào đến dải IP của S3 đều đi qua endpoint mà không qua NAT Gateway hay Internet công cộng.
 
-Chúng ta cũng thêm luật egress tương ứng cho security group của EC2:
+Hệ thống cũng bổ sung luật egress tương ứng cho security group của EC2:
 
 ```hcl
 resource "aws_security_group_rule" "ec2_egress_s3" {

@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 5.8. </b> "
 ---
 
-Tự động hóa giúp các cập nhật code được triển khai mượt mà lên môi trường sản xuất. Trong phần này, chúng ta cấu hình các GitHub Repository Secrets và tìm hiểu cách kích hoạt quy trình CI/CD tự động cho cả **Frontend (AWS Amplify)** và **Backend (EC2 Auto Scaling Group)**.
+Tự động hóa giúp các cập nhật code được triển khai mượt mà lên môi trường sản xuất. Trong phần này, tiến hành cấu hình các GitHub Repository Secrets và tìm hiểu cách kích hoạt quy trình CI/CD tự động cho cả **Frontend (AWS Amplify)** và **Backend (EC2 Auto Scaling Group)**.
 
 ---
 

@@ -8,7 +8,7 @@ pre : " <b> 5.3.6. </b> "
 
 AWS WAF (Web Application Firewall) kiểm tra lưu lượng truy cập web đầu vào để ngăn chặn các lỗ hổng phổ biến, tấn công SQL injection, cross-site scripting (XSS), bad user agents và giới hạn tần suất truy cập (rate-limiting DDoS) trước khi lưu lượng chạm tới các máy chủ backend.
 
-Trong kiến trúc này, chúng ta cấu hình một **Regional WAF v2 Web ACL** và gắn trực tiếp vào Application Load Balancer (`aws_lb.main`).
+Trong kiến trúc này, hệ thống cấu hình một **Regional WAF v2 Web ACL** và gắn trực tiếp vào Application Load Balancer (`aws_lb.main`).
 
 #### 1. Regional WAF Web ACL (`waf.tf`)
 
