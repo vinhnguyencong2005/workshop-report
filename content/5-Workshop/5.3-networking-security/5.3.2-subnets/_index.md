@@ -10,22 +10,6 @@ pre : " <b> 5.3.2. </b> "
 
 Six subnets across two AZs, organized into three tiers. Each tier has one subnet per AZ so the application survives a single-AZ failure:
 
-```
-                AZ-1 (us-east-1a)          AZ-2 (us-east-1b)
-               ┌─────────────────┐       ┌─────────────────┐
-   Public      │  10.0.1.0/24    │       │  10.0.2.0/24    │
-               │  public_1       │       │  public_2       │
-               └────────┬────────┘       └────────┬────────┘
-                        │                         │
-   Private App  │  10.0.10.0/24   │       │  10.0.11.0/24   │
-               │  private_1      │       │  private_2      │
-               └────────┬────────┘       └────────┬────────┘
-                        │                         │
-   Private DB   │  10.0.20.0/24   │       │  10.0.21.0/24   │
-               │  private_3      │       │  private_4      │
-               └─────────────────┘       └─────────────────┘
-```
-
 If `us-east-1a` fails, everything in `us-east-1b` keeps running.
 
 #### Public — for the ALB and NAT Gateways
@@ -123,13 +107,3 @@ resource "aws_subnet" "private_4" {
   }
 }
 ```
-
-#### CIDR Planning
-
-{{% notice info %}}
-The gaps between tiers (`10.0.3–9`, `10.0.12–19`) leave room for future subnets without re-architecting the VPC.
-{{% /notice %}}
-
----
-
-✅ **Next:** [Route Tables & NAT Gateways](5.3.3-routes-nat/) — how traffic flows between subnets and the internet.

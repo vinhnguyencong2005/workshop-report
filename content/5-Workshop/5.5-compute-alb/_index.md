@@ -31,5 +31,3 @@ Three components work together to run and expose the application:
 2. [SSM VPC Endpoints](5.5.2-ssm-endpoints/) — Shell access without SSH
 3. [Auto Scaling Group](5.5.3-asg/) — 2–4 instances across two AZs
 4. [Application Load Balancer](5.5.4-alb/) — Internet-facing entry point with health checks
-
----

@@ -47,10 +47,6 @@ resource "aws_autoscaling_group" "app" {
 | `health_check_type` | `ELB` | Uses ALB target group health checks — catches app-level failures, not just EC2 status |
 | `health_check_grace_period` | 300 | 5 minutes for user data to finish bootstrapping before health checks start |
 
-`health_check_type = "ELB"` is important: EC2-level health checks only detect hypervisor failures. ELB health checks hit the `/health` endpoint — if the Node.js app crashes but the instance is running, the ASG still replaces it.
+`health_check_type = "ELB"`: EC2-level health checks only detect hypervisor failures. ELB health checks hit the `/health` endpoint — if the Node.js app crashes but the instance is running, the ASG still replaces it.
 
 `create_before_destroy` on the lifecycle means Terraform creates the new ASG before destroying the old one during updates — no downtime during config changes.
-
----
-
-✅ **Next:** [Application Load Balancer](5.5.4-alb/) — the single internet-facing entry point.
