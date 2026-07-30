@@ -12,23 +12,24 @@ includeInReport: false
 {{% /notice %}}
 
 
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+# Triển khai LMS Full-Stack trên AWS với Terraform
 
 #### Tổng quan
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+Trong workshop này, bạn sẽ triển khai một hệ thống **Learning Management System (LMS) 3 tầng** hoàn chỉnh trên AWS bằng **Terraform** — Infrastructure as Code (IaC). Bạn sẽ khởi tạo VPC với public và private subnets, AWS WAF v2, AWS Amplify Hosting, API Gateway HTTP API, EC2 Auto Scaling Group chạy Node.js, RDS MySQL Multi-AZ, ElastiCache Redis, DynamoDB, và S3 — hoàn toàn bằng code `.tf`. Không thao tác thủ công trên AWS Console. Cuối bài lab, lệnh `terraform destroy` sẽ tự động dọn dẹp toàn bộ tài nguyên.
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
-
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
+{{% notice info %}}
+Workshop này được thiết kế dành cho **người mới bắt đầu** chưa từng có kinh nghiệm với Terraform hoặc AWS. Bạn sẽ học được cả về các dịch vụ AWS và cách quản lý hạ tầng bằng mã lệnh.
+{{% /notice %}}
 
 #### Nội dung
 
-1. [Tổng quan về workshop](5.1-Workshop-overview/)
-2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
-6. [Dọn dẹp tài nguyên](5.6-Cleanup/)
+1. [Tổng quan về Workshop](5.1-Workshop-overview/)
+2. [Các bước chuẩn bị](5.2-Prerequiste/)
+3. [Mạng & Bảo mật](5.3-networking-security/)
+4. [Tầng dữ liệu](5.4-data-layer/)
+5. [Tầng tính toán & Cân bằng tải](5.5-compute-alb/)
+6. [Giám sát hệ thống](5.6-monitoring/)
+7. [Triển khai & Kiểm tra](5.7-deploy-verify/)
+8. [CI/CD](5.8-cicd/)
+9. [Dọn dẹp tài nguyên](5.9-cleanup/)

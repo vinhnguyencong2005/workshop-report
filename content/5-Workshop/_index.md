@@ -10,23 +10,24 @@ includeInReport: false
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
 {{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# Deploy a Full-Stack LMS on AWS with Terraform
 
 #### Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+In this workshop, you will deploy a complete **3-tier Learning Management System** on AWS using **Terraform** — Infrastructure as Code. You will provision a VPC with public and private subnets, AWS WAF v2, AWS Amplify Hosting, API Gateway HTTP API, an Auto Scaling Group of EC2 instances running Node.js, RDS MySQL with Multi-AZ, ElastiCache Redis, DynamoDB, S3, and more — all from `.tf` files. No clicking in the console. At the end, a single `terraform destroy` cleans everything up.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
-
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+{{% notice info %}}
+This workshop is designed for **beginners** with no prior Terraform or AWS experience. You will learn both the "what" (AWS services) and the "how" (Infrastructure as Code).
+{{% /notice %}}
 
 #### Content
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+1. [Workshop Overview](5.1-Workshop-overview/)
+2. [Prerequisites](5.2-Prerequiste/)
+3. [Networking & Security](5.3-networking-security/)
+4. [Data Layer](5.4-data-layer/)
+5. [Compute & Load Balancing](5.5-compute-alb/)
+6. [Monitoring](5.6-monitoring/)
+7. [Deploy & Verify](5.7-deploy-verify/)
+8. [CI/CD](5.8-cicd/)
+9. [Clean Up](5.9-cleanup/)

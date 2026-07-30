@@ -8,25 +8,27 @@ pre: " <b> 1.6. </b> "
 
 ### Week 6 Objectives
 
-- Deploy the entire application to AWS infrastructure using Terraform
-- Set up CI/CD pipeline to automate backend and frontend deployments
+- Deploy the entire LMS application to AWS infrastructure using Terraform
+- Set up a reliable CI/CD pipeline to automate backend and frontend deployments
 
 ### Tasks to Complete This Week
 
 | Day | Task | Start Date | End Date | Resources |
 | --- | ---- | ---------- | -------- | --------- |
-| Mon | - Run `terraform apply` to deploy EC2 on public subnet <br> - Manually install Node.js, PM2, clone backend source to the instance <br> - Configure environment variables (.env) and verify backend via public IP | 20/07/2026 | 20/07/2026 | |
-| Tue | - Build and deploy frontend: `npm run build` → upload to S3 static website hosting <br> - Verify frontend connects to backend via public IP <br> - Begin researching how to move EC2 from public to private subnet for better security | 21/07/2026 | 21/07/2026 | |
-| Wed | - Refactor Terraform: move EC2 to private subnet, configure NAT Gateway <br> - Experiment with deploy strategy: upload code to S3 → send SSM Run Command so instances pull code from S3 <br> - Attempt to sign up for Cloudflare CDN but account was rejected, decide to move on without it | 22/07/2026 | 22/07/2026 | |
-| Thu | - Optimize deploy strategy: replace SSM trigger with instance pulling code from S3 on boot (user_data) <br> - Write `user_data.tftpl` script: install AWS CLI, Node.js, PM2, pull backend.zip, unzip, start app <br> - Configure DynamoDB on AWS and verify backend connectivity | 23/07/2026 | 23/07/2026 | |
-| Fri | - Set up GitHub Actions workflow for backend: zip source → upload S3 → trigger ASG instance refresh <br> - Build deploy script for frontend: `aws s3 sync dist/` to S3 bucket <br> - Write IAM policies for EC2 (S3, DynamoDB, Secrets Manager, SSM permissions) | 24/07/2026 | 24/07/2026 | |
-| Sat | - Test full automated deploy flow: push code → GitHub Actions run → ASG refresh → app live <br> - Log and fix issues: CORS, health check timeout, missing security group rules <br> - Fine-tune ALB target group health check to reduce unhealthy instance detection time | 25/07/2026 | 25/07/2026 | |
-| Sun | - Clean up and reorganize Terraform directory structure <br> - Write documentation for infrastructure architecture and deployment process <br> - Run final end-to-end test: login, browse courses, take quiz, submit assignment on production | 26/07/2026 | 26/07/2026 | |
+| Mon | - Run `terraform apply` to provision initial infrastructure: VPC, public subnets, EC2 instances <br> - SSH into instances, install Node.js 20 via nvm, clone backend source code manually <br> - Configure `.env` with database credentials, JWT secret, Redis and AWS region <br> - Install PM2 process manager, start backend on port 3000, verify via public IP <br> - Identify early issues: hardcoded config values, no auto-restart on crash, public exposure of EC2 | 20/07/2026 | 20/07/2026 | |
+| Tue | - Migrate frontend hosting to **AWS Amplify Hosting** (`amplify.tf`) for global CDN edge distribution and automatic HTTPS SSL <br> - Configure SPA client-side rewrite rules in `amplify.tf` for index.html navigation <br> - Verify full-stack connectivity: frontend loads from Amplify over HTTPS <br> - Security review: EC2 directly on public internet is a major risk — begin researching private subnet architecture <br> - Add ALB, private subnets, and NAT Gateway to Terraform configuration | 21/07/2026 | 21/07/2026 | |
+| Wed | - Refactor Terraform: move EC2 to private subnets, route outbound traffic through NAT Gateway <br> - Provision Application Load Balancer in public subnets forwarding to EC2 target group on port 3000 <br> - Provision **Regional AWS WAF v2** (`waf.tf`) attached to ALB with AWS Managed Rules (OWASP Top 10, Bad Inputs, IP Reputation) and IP Rate Limiting <br> - Solve deployment challenge: private instances have no public IP — design S3 + SSM strategy <br> - Provision **API Gateway HTTP API** (`apigateway.tf`) to provide managed HTTPS for ALB and solve browser Mixed Content errors | 22/07/2026 | 22/07/2026 | |
+| Thu | - Improve deploy architecture: replace SSM push with user_data pull-on-boot for immutable deployments <br> - Write `user_data.tftpl` bootstrap script: install AWS CLI v2, nvm + Node.js 20, PM2, pull backend.zip from S3, unzip, `npm ci --production`, start app via PM2 <br> - Provision RDS MySQL (Multi-AZ) and ElastiCache Redis (2-node cluster) via Terraform <br> - Configure DynamoDB tables (ClassContent, ForumData, QuizContent, StudentSchedule, CourseAssign) on AWS <br> - Secure S3 frontend bucket by disabling public website access and turning on full public access block | 23/07/2026 | 23/07/2026 | |
+| Fri | - Set up GitHub Actions CI/CD workflows: frontend via AWS Amplify CLI API (`create-deployment` + upload + `start-deployment`) and backend via S3 + ASG Rolling Refresh <br> - Write IAM policies for EC2 instance role: S3 read/write, DynamoDB CRUD, Secrets Manager, SSM managed instance <br> - Configure security groups with least-privilege: EC2 ingress only from ALB, RDS ingress only from EC2, Redis only from EC2 <br> - Configure Regional WAF v2 rate limiting rule (2,000 req/5min) and API Gateway CORS settings | 24/07/2026 | 24/07/2026 | |
+| Sat | - Run full automated deployment test: push code → GitHub Actions triggers → frontend deploys to Amplify → ASG instance refresh rolls out backend instances → health checks pass <br> - Debug and fix Mixed Content security errors: route frontend API calls through API Gateway HTTPS endpoint (`https://<api-id>.execute-api.us-east-1.amazonaws.com`) <br> - Fine-tune ASG rolling refresh: set `InstanceWarmup: 0` and polling sleep interval to 10s for fast CI/CD execution <br> - Test ASG auto-scaling: manually trigger scale-out, verify new instances pull latest code and register with ALB <br> - Document all issues encountered and their resolutions | 25/07/2026 | 25/07/2026 | |
+| Sun | - Reorganize Terraform project structure: split monolithic config into separate files (`waf.tf`, `amplify.tf`, `apigateway.tf`, etc.) <br> - Extract hardcoded values into variables (region, instance types, CIDR blocks) with `terraform.tfvars` <br> - Replace personal domain defaults with generic domain `lms.uni` (`app.lms.uni`) <br> - Write infrastructure README and Hugo workshop documentation with architecture diagram and deployment guide <br> - Final production smoke test: user registration → login → browse courses → take quiz → submit assignment → view grades <br> - Push all Terraform and application code to GitHub, verify CI/CD triggers on push | 26/07/2026 | 26/07/2026 | |
 
 ### Week 6 Results
 
-- Complete AWS infrastructure: EC2 in private subnet, public ALB, RDS, ElastiCache Redis, DynamoDB
-- Stable deployment strategy: backend via S3 + ASG instance refresh, frontend via S3 sync
-- CI/CD pipeline with GitHub Actions operational, auto-deploying on push to `main` branch
-- Abandoned Cloudflare after account rejection, using ALB DNS and S3 website endpoint directly
-- Infrastructure architecture and deployment documentation written, ready for operations phase
+- Fully automated AWS infrastructure provisioned via Terraform: VPC, ALB, Regional AWS WAF v2, AWS Amplify Hosting, API Gateway HTTP API, EC2 ASG in private subnets, RDS MySQL Multi-AZ, ElastiCache Redis, DynamoDB (5 tables), S3 (private buckets)
+- Immutable deployment strategy established: backend via S3 artifact + ASG rolling instance refresh, frontend via AWS Amplify 3-step deployment API
+- CI/CD pipeline operational on GitHub Actions: `git push main` triggers automated frontend release to Amplify and zero-downtime backend deployment
+- Defense-in-depth security baseline implemented: Regional WAF v2 (OWASP Top 10, IP reputation, rate limiting), API Gateway HTTPS, private subnets, least-privilege security groups and IAM roles
+- Browser Mixed Content security completely resolved using API Gateway HTTPS proxying to ALB
+- Infrastructure documentation, Hugo workshop guides, and variable templates ready for team collaboration
+
