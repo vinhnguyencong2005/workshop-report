@@ -12,7 +12,7 @@ Trong workshop này, một ứng dụng **Hệ thống Quản lý Học tập (L
 
 Đây là hướng dẫn thực hành từng bước từ một tài khoản AWS trống đến một ứng dụng web quy mô doanh nghiệp, có khả năng mở rộng — không yêu cầu kinh nghiệm Terraform từ trước.
 
-![Sơ đồ kiến trúc](../../../images/workshop/aws_architecture.png)
+![Sơ đồ kiến trúc](/images/workshop/aws_architecture.png)
 
 **Kiến trúc 3 tầng (3-tier architecture)** trải dài trên hai Availability Zones (AZs):
 

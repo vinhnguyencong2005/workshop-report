@@ -26,7 +26,7 @@ Do mọi tài nguyên đã được khai báo tập trung bằng **Terraform Inf
 
 3. Terraform sẽ liệt kê toàn bộ các tài nguyên sắp bị xóa. Gõ **`yes`** khi được hỏi để xác nhận:
 
-![terraform destroy](../../../images/workshop/5.9/1.png)
+![terraform destroy](/images/workshop/5.9/1.png)
 
 ##### Thời gian dọn dẹp dự kiến:
 - **0–2 phút**: WAF Web ACL, API Gateway HTTP API, ALB listeners, Security Groups, IAM instance profiles
@@ -68,7 +68,7 @@ Kết quả trả về dự kiến:
 []
 ```
 
-![verify cleanup](../../../images/workshop/5.9/2.png)
+![verify cleanup](/images/workshop/5.9/2.png)
 
 ---
 

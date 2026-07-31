@@ -26,15 +26,15 @@ If any command returns "command not found", follow the install link for your OS 
 1. Click the top left user name → **Security credentials** tab
 2. Scroll to **Access keys** → **Create access key**
 
-![](../../../images/workshop/5.2/1.png)
+![](/images/workshop/5.2/1.png)
 
 3. Choose **Command Line Interface (CLI)** → check the confirmation box → **Next**
 
-![](../../../images/workshop/5.2/2.png)
+![](/images/workshop/5.2/2.png)
 
 4. Click **Create access key**
 
-![](../../../images/workshop/5.2/3.png)
+![](/images/workshop/5.2/3.png)
 
 5. **Save both values** (download .csv or copy them):
 
@@ -47,7 +47,7 @@ If any command returns "command not found", follow the install link for your OS 
 The Secret Access Key is shown **only once**. Save it now. Never commit it to Git or share it publicly.
 {{% /notice %}}
 
-![access keys](../../../images/workshop/5.2/4.png)
+![access keys](/images/workshop/5.2/4.png)
 
 ##### 2. Configure AWS CLI {#configure-aws-cli}
 
@@ -64,7 +64,7 @@ Default region name [None]: us-east-1
 Default output format [None]: json
 ```
 
-![](../../../images/workshop/5.2/5.png)
+![](/images/workshop/5.2/5.png)
 
 #### Clone the Repository
 

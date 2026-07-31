@@ -26,7 +26,7 @@ Because everything was provisioned declaratively using **Terraform Infrastructur
 
 3. Terraform will display a list of all resources to be deleted. Type **`yes`** when prompted to confirm:
 
-![terraform destroy](../../../images/workshop/5.9/1.png)
+![terraform destroy](/images/workshop/5.9/1.png)
 
 ##### Expected Teardown Timeline:
 - **0–2 min**: WAF Web ACL, API Gateway HTTP API, ALB listeners, Security Groups, IAM instance profiles

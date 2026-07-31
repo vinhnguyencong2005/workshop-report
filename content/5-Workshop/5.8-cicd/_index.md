@@ -26,8 +26,8 @@ Before running workflows, add your AWS credentials and Terraform output endpoint
 | `AMPLIFY_APP_ID` | Value from `terraform output amplify_app_id` |
 | `VITE_API_BASE_URL` | Value from `terraform output backend_api_url` (API Gateway HTTPS) |
 
-![github secrets frontend](../../../images/workshop/5.8/1.png)
-![github secrets backend](../../../images/workshop/5.8/2.png)
+![github secrets frontend](/images/workshop/5.8/1.png)
+![github secrets backend](/images/workshop/5.8/2.png)
 
 {{% notice tip %}}
 Ensure `VITE_API_BASE_URL` points to your **API Gateway HTTPS URL** (`https://<api-id>.execute-api.us-east-1.amazonaws.com`) to prevent browser Mixed Content errors.
@@ -60,8 +60,8 @@ git commit -m "Update application code"
 git push origin main
 ```
 
-![workflow frontend](../../../images/workshop/5.8/3.png)
-![workflow backend](../../../images/workshop/5.8/4.png)
+![workflow frontend](/images/workshop/5.8/3.png)
+![workflow backend](/images/workshop/5.8/4.png)
 ---
 
 #### Step 4: Monitor Execution & Verify Deployment
@@ -71,5 +71,5 @@ git push origin main
    - Open your frontend app: `https://main.<app-id>.amplifyapp.com`
    - Test API health: `curl -s https://<api-id>.execute-api.us-east-1.amazonaws.com/health`
 
-![frontend UI](../../../images/workshop/5.8/5.png)
-![backend health](../../../images/workshop/5.8/6.png)
+![frontend UI](/images/workshop/5.8/5.png)
+![backend health](/images/workshop/5.8/6.png)

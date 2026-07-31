@@ -12,7 +12,7 @@ In this workshop, a **full-stack Learning Management System (LMS)** will be depl
 
 This is a hands-on, step-by-step journey from an empty AWS account to a production-grade, scalable web application — no prior Terraform experience required.
 
-![Architecture Diagram](../../../images/workshop/aws_architecture.png)
+![Architecture Diagram](/images/workshop/aws_architecture.png)
 
 A **3-tier architecture** spanning two Availability Zones:
 

@@ -21,13 +21,13 @@ Now that all Terraform files (`provider.tf`, `vpc.tf`, `security_groups.tf`, `ia
    ```bash
    terraform init
    ```
-![terraform init](../../../images/workshop/5.7/1.png)
+![terraform init](/images/workshop/5.7/1.png)
 
 3. Generate and review the execution plan:
    ```bash
    terraform plan
    ```
-![terraform plan](../../../images/workshop/5.7/2.png)
+![terraform plan](/images/workshop/5.7/2.png)
 
 {{% notice info %}}
 `terraform plan` compares your HCL code against the current cloud state and displays all resources to be created (50+ AWS resources).
@@ -45,7 +45,7 @@ terraform apply
 
 Upon successful completion, Terraform outputs all key endpoint URLs and resource identifiers:
 
-![terraform apply outputs](../../../images/workshop/5.7/3.png)
+![terraform apply outputs](/images/workshop/5.7/3.png)
 
 {{% notice tip %}}
 **Save These Outputs!**
@@ -81,7 +81,7 @@ Expected output:
 {"status":"ok"}
 ```
 
-![backend health](../../../images/workshop/5.7/4.png)
+![backend health](/images/workshop/5.7/4.png)
 
 ---
 
@@ -96,4 +96,4 @@ chmod +x src/config/seed_sample_data.sh
 
 ```
 
-![seed data](../../../images/workshop/5.7/5.png)
+![seed data](/images/workshop/5.7/5.png)

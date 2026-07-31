@@ -26,15 +26,15 @@ Nếu bất kỳ lệnh nào báo lỗi "command not found", hãy làm theo liê
 1. Nhấp vào tên người dùng ở góc trên bên trái $\rightarrow$ chọn tab **Security credentials**.
 2. Cuộn xuống phần **Access keys** $\rightarrow$ nhấp **Create access key**.
 
-![](../../../images/workshop/5.2/1.png)
+![](/images/workshop/5.2/1.png)
 
 3. Chọn **Command Line Interface (CLI)** $\rightarrow$ tích chọn ô xác nhận $\rightarrow$ nhấp **Next**.
 
-![](../../../images/workshop/5.2/2.png)
+![](/images/workshop/5.2/2.png)
 
 4. Nhấp **Create access key**.
 
-![](../../../images/workshop/5.2/3.png)
+![](/images/workshop/5.2/3.png)
 
 5. **Lưu lại cả hai giá trị** (tải file .csv hoặc sao chép trực tiếp):
 
@@ -47,7 +47,7 @@ Nếu bất kỳ lệnh nào báo lỗi "command not found", hãy làm theo liê
 Secret Access Key chỉ hiển thị **duy nhất một lần**. Hãy lưu lại ngay bây giờ. Không bao giờ commit khóa này lên Git hoặc chia sẻ công khai.
 {{% /notice %}}
 
-![access keys](../../../images/workshop/5.2/4.png)
+![access keys](/images/workshop/5.2/4.png)
 
 ##### 2. Cấu hình AWS CLI {#configure-aws-cli}
 
@@ -64,7 +64,7 @@ Default region name [None]: us-east-1
 Default output format [None]: json
 ```
 
-![](../../../images/workshop/5.2/5.png)
+![](/images/workshop/5.2/5.png)
 
 #### Clone Repository
 

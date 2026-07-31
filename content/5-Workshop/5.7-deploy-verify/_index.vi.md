@@ -27,7 +27,7 @@ Sau khi tất cả các file cấu hình Terraform (`provider.tf`, `vpc.tf`, `se
    terraform plan
    ```
 
-![terraform plan](../../../images/workshop/5.7/1.png)
+![terraform plan](/images/workshop/5.7/1.png)
 
 {{% notice info %}}
 Lệnh `terraform plan` so sánh code HCL của bạn với trạng thái thực tế trên cloud và hiển thị toàn bộ tài nguyên chuẩn bị khởi tạo (hơn 50+ tài nguyên AWS).
@@ -45,7 +45,7 @@ terraform apply
 
 Sau khi hoàn tất thành công, Terraform sẽ in ra tất cả các URL endpoint và thông tin tài nguyên:
 
-![terraform apply outputs](../../../images/workshop/5.7/2.png)
+![terraform apply outputs](/images/workshop/5.7/2.png)
 
 {{% notice tip %}}
 **Lưu lại các thông tin Output này!**
@@ -80,7 +80,7 @@ Kết quả trả về dự kiến:
 {"status":"ok"}
 ```
 
-![backend health](../../../images/workshop/5.7/3.png)
+![backend health](/images/workshop/5.7/3.png)
 
 ---
 
@@ -96,7 +96,7 @@ echo $AMPLIFY_URL
 
 Mở URL trên trình duyệt web. Bạn sẽ thấy màn hình đăng nhập của hệ thống TTNT LMS chạy trên HTTPS mà không gặp bất kỳ lỗi Mixed Content nào.
 
-![frontend login](../../../images/workshop/5.7/4.png)
+![frontend login](/images/workshop/5.7/4.png)
 
 ---
 
@@ -124,7 +124,7 @@ Kiểm tra trạng thái máy chủ EC2 và các tiến trình Node.js / PM2 mà
    cat /var/log/user_data.log
    ```
 
-![ssm session](../../../images/workshop/5.7/5.png)
+![ssm session](/images/workshop/5.7/5.png)
 
 ---
 
@@ -142,7 +142,7 @@ Kiểm tra endpoint API trả về dữ liệu JSON mẫu:
 curl -s $API_URL/api/classes | jq
 ```
 
-![seed data](../../../images/workshop/5.7/6.png)
+![seed data](/images/workshop/5.7/6.png)
 
 ---
 
