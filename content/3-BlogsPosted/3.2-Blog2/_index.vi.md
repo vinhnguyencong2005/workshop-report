@@ -72,3 +72,4 @@ Cảm ơn mọi người đã xem.
 ### Nguồn tham khảo
 - [TechRepublic: AWS Billing Bug Trillion-Dollar Estimates Explained](https://www.techrepublic.com/article/news-aws-billing-bug-trillion-dollar-estimates-explained/)
 - [SecNews: AWS Billing Bug Logariasmos Triseka Tommyria](https://www.secnews.gr/en/722299/aws-billing-bug-logariasmos-triseka-tommyria/)
+- [Bài viết trên Facebook](https://www.facebook.com/groups/660548818043427/?multi_permalinks=2225698958195064&ref=share)

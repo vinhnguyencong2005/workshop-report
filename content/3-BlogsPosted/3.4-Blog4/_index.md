@@ -60,3 +60,4 @@ Thank you for reading!
 ### References
 - [Amazon S3 User Guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
 - [Amazon S3 Pricing](https://aws.amazon.com/s3/pricing/)
+- [Facebook Post](https://www.facebook.com/groups/660548818043427/?multi_permalinks=2227771891321104&ref=share)

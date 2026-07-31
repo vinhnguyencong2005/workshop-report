@@ -60,3 +60,4 @@ Cảm ơn mọi người đã xem!
 ### Nguồn tham khảo
 - [Amazon S3 User Guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
 - [Amazon S3 Pricing](https://aws.amazon.com/vi/s3/pricing)
+- [Bài viết trên Facebook](https://www.facebook.com/groups/660548818043427/?multi_permalinks=2227771891321104&ref=share)
