@@ -20,13 +20,13 @@ To objectively reflect on my internship period, I would like to evaluate myself 
 | 3   | **Proactiveness**                   | Taking initiative, seeking out tasks without waiting for instructions                            | ✅    | ☐    | ☐       |
 | 4   | **Sense of responsibility**         | Completing tasks on time and ensuring quality                                                    | ✅    | ☐    | ☐       |
 | 5   | **Discipline**                      | Adhering to schedules, rules, and work processes                                                 | ✅    | ☐    | ☐       |
-| 6   | **Progressive mindset**             | Willingness to receive feedback and improve oneself                                              | ☐    | ✅    | ☐       |
+| 6   | **Progressive mindset**             | Willingness to receive feedback and improve oneself                                              | ✅    | ☐    | ☐       |
 | 7   | **Communication**                   | Presenting ideas and reporting work clearly                                                      | ☐    | ✅    | ☐       |
 | 8   | **Teamwork**                        | Working effectively with colleagues and participating in teams                                   | ✅    | ☐    | ☐       |
 | 9   | **Professional conduct**            | Respecting colleagues, partners, and the work environment                                        | ✅    | ☐    | ☐       |
-| 10  | **Problem-solving skills**          | Identifying problems, proposing solutions, and showing creativity                                | ✅    | ☐    | ☐       |
+| 10  | **Problem-solving skills**          | Identifying problems, proposing solutions, and showing creativity                                |  ☐   | ✅   | ☐       |
 | 11  | **Contribution to project/team**    | Work effectiveness, innovative ideas, recognition from the team                                  | ✅    | ☐    | ☐       |
-| 12  | **Cloud & DevOps skills**           | Familiarity with AWS services, CI/CD pipeline, Infrastructure as Code                           | ☐    | ✅    | ☐       |
+| 12  | **Cloud & DevOps skills**           | Familiarity with AWS services, CI/CD pipeline, Infrastructure as Code                            | ✅    | ☐    | ☐       |
 | 13  | **Emerging tech awareness**         | Proactively staying updated on trends: AI/ML, Serverless, Containerization, Voice AI             | ✅    | ☐    | ☐       |
 | 14  | **Self-learning ability**           | Self-directed research, hands-on labs, attending workshops/communities to upskill               | ☐    | ✅    | ☐       |
 | 15  | **Technical writing skills**        | Writing clear, well-structured blogs, tutorials, and event reports                               | ✅    | ☐    | ☐       |
@@ -35,11 +35,3 @@ To objectively reflect on my internship period, I would like to evaluate myself 
 | 18  | **Adaptability**                    | Quickly adapting to new environments, tools, and workflows                                       | ✅    | ☐    | ☐       |
 | 19  | **Security awareness**              | Understanding of information security, following best practices when handling data & systems     | ✅    | ☐    | ☐       |
 | 20  | **Overall**                         | General evaluation of the entire internship period                                               | ✅    | ☐    | ☐       |
-
-### Needs Improvement
-
-* **Progressive mindset:** Be more proactive in seeking feedback from supervisors and colleagues, turning each suggestion into concrete improvement actions rather than passively receiving input.
-* **Communication:** Sharpen the ability to present ideas clearly and concisely in team meetings; improve professional email writing and work reporting skills in English.
-* **Cloud & DevOps skills:** Increase hands-on practice with core AWS services (Lambda, DynamoDB, S3, CloudFront, WAF) and gain familiarity with CI/CD pipelines (GitHub Actions, AWS CodePipeline) and Infrastructure as Code (Terraform/CDK).
-* **Self-learning ability:** Build a more structured self-learning roadmap, combining theory (reading official documentation) with hands-on practice (labs, personal projects) to enhance knowledge retention.
-* Enhance technical writing skills for reports and knowledge-sharing blog posts

@@ -1,6 +1,6 @@
 ---
 title: "Tự đánh giá"
-date: 2026-07-30
+date: 2024-01-01
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
@@ -21,14 +21,14 @@ Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân t
 | 3   | **Chủ động**                        | Tự tìm hiểu, nhận nhiệm vụ mà không chờ chỉ dẫn                                                  | ✅   | ☐   | ☐          |
 | 4   | **Tinh thần trách nhiệm**           | Hoàn thành công việc đúng hạn, đảm bảo chất lượng                                                | ✅   | ☐   | ☐          |
 | 5   | **Kỷ luật**                         | Tuân thủ giờ giấc, nội quy, quy trình làm việc                                                   | ✅   | ☐   |   ☐        |
-| 6   | **Tính cầu tiến**                   | Sẵn sàng nhận feedback và cải thiện bản thân                                                     | ☐   | ✅   | ☐          |
+| 6   | **Tính cầu tiến**                   | Sẵn sàng nhận feedback và cải thiện bản thân                                                     | ✅   | ☐  | ☐          |
 | 7   | **Giao tiếp**                       | Trình bày ý tưởng, báo cáo công việc rõ ràng                                                     | ☐   | ✅   | ☐          |
 | 8   | **Hợp tác nhóm**                    | Làm việc hiệu quả với đồng nghiệp, tham gia nhóm                                                 | ✅   | ☐   | ☐          |
 | 9   | **Ứng xử chuyên nghiệp**            | Tôn trọng đồng nghiệp, đối tác, môi trường làm việc                                              | ✅   | ☐   | ☐          |
-| 10  | **Tư duy giải quyết vấn đề**        | Nhận diện vấn đề, đề xuất giải pháp, sáng tạo                                                    | ✅   |  ☐  | ☐          |
+| 10  | **Tư duy giải quyết vấn đề**        | Nhận diện vấn đề, đề xuất giải pháp, sáng tạo                                                    |  ☐  |  ✅  | ☐          |
 | 11  | **Đóng góp vào dự án/tổ chức**      | Hiệu quả công việc, sáng kiến cải tiến, ghi nhận từ team                                         | ✅   | ☐   | ☐          |
-| 12  | **Kỹ năng Cloud & DevOps**          | Làm quen với AWS services, CI/CD pipeline, Infrastructure as Code                                | ☐   | ✅   | ☐          |
-| 13  | **Kỹ năng tìm hiểu công nghệ mới**  | Chủ động cập nhật xu hướng: AI/ML, Serverless, Containerization, Voice AI                        | ✅   | ☐   | ☐          |
+| 12  | **Kỹ năng Cloud & DevOps**          | Làm quen với AWS services, CI/CD pipeline, Infrastructure as Code                                | ✅   |  ☐  | ☐          |
+| 13  | **Kỹ năng tìm hiểu công nghệ mới**  | Chủ động cập nhật xu hướng: AI/ML, Serverless, Containerization, Voice AI                        | ✅ |  ☐  | ☐          |
 | 14  | **Khả năng tự học (Self-learning)** | Tự tìm tài liệu, thực hành lab, tham gia workshop/cộng đồng để nâng cao kỹ năng                 | ☐   | ✅   | ☐          |
 | 15  | **Kỹ năng viết báo cáo kỹ thuật**   | Viết blog, tài liệu hướng dẫn, bài thu hoạch rõ ràng, dễ hiểu, có cấu trúc                      | ✅   | ☐   | ☐          |
 | 16  | **Tham gia cộng đồng chuyên môn**   | Tham dự meetup, hội thảo, sự kiện cộng đồng; đóng góp kiến thức cho tập thể                     | ✅   | ☐   | ☐          |
@@ -36,10 +36,3 @@ Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân t
 | 18  | **Khả năng thích nghi**             | Thích ứng nhanh với môi trường mới, công cụ mới, quy trình làm việc khác nhau                    | ✅   | ☐   | ☐          |
 | 19  | **An toàn & bảo mật**               | Có ý thức về bảo mật thông tin, tuân thủ best practices khi làm việc với dữ liệu & hệ thống      | ✅   | ☐   | ☐          |
 | 20  | **Tổng thể**                        | Đánh giá chung về toàn bộ quá trình thực tập                                                     | ✅   | ☐   | ☐          |
-
-### Cần cải thiện
-
-* **Tính cầu tiến:** Chủ động hơn trong việc tìm kiếm phản hồi từ cấp trên và đồng nghiệp, biến mỗi góp ý thành hành động cải thiện cụ thể thay vì chỉ tiếp nhận một cách thụ động.
-* **Giao tiếp:** Rèn luyện kỹ năng trình bày ý tưởng mạch lạc, súc tích hơn trong các buổi họp nhóm; cải thiện khả năng viết email và báo cáo công việc bằng tiếng Anh chuyên nghiệp.
-* **Kỹ năng Cloud & DevOps:** Tăng cường thực hành các dịch vụ AWS core (Lambda, DynamoDB, S3, CloudFront, WAF) và làm quen với CI/CD pipeline (GitHub Actions, AWS CodePipeline) và Infrastructure as Code (Terraform/CDK).
-* **Khả năng tự học:** Xây dựng lộ trình tự học có cấu trúc hơn, kết hợp giữa lý thuyết (đọc tài liệu chính thống) và thực hành (hands-on lab, personal project) để nâng cao hiệu quả tiếp thu.
