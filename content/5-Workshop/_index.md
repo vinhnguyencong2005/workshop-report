@@ -16,10 +16,6 @@ includeInReport: false
 
 In this workshop, you will deploy a complete **3-tier Learning Management System** on AWS using **Terraform** — Infrastructure as Code. You will provision a VPC with public and private subnets, AWS WAF v2, AWS Amplify Hosting, API Gateway HTTP API, an Auto Scaling Group of EC2 instances running Node.js, RDS MySQL with Multi-AZ, ElastiCache Redis, DynamoDB, S3, and more — all from `.tf` files. No clicking in the console. At the end, a single `terraform destroy` cleans everything up.
 
-{{% notice info %}}
-This workshop is designed for **beginners** with no prior Terraform or AWS experience. You will learn both the "what" (AWS services) and the "how" (Infrastructure as Code).
-{{% /notice %}}
-
 #### Content
 
 1. [Workshop Overview](5.1-Workshop-overview/)

@@ -16,7 +16,7 @@ includeInReport: false
 
 #### Tổng quan
 
-Trong workshop này, bạn sẽ triển khai một hệ thống **Learning Management System (LMS) 3 tầng** hoàn chỉnh trên AWS bằng **Terraform** — Infrastructure as Code (IaC). Ta sẽ khởi tạo VPC với public và private subnets, AWS WAF v2, AWS Amplify Hosting, API Gateway HTTP API, EC2 Auto Scaling Group chạy Node.js, RDS MySQL Multi-AZ, ElastiCache Redis, DynamoDB, và S3 — hoàn toàn bằng code `.tf`. Không thao tác thủ công trên AWS Console. Cuối bài lab, lệnh `terraform destroy` sẽ tự động dọn dẹp toàn bộ tài nguyên.
+Trong workshop này, ta sẽ triển khai một hệ thống **Learning Management System (LMS) 3 tầng** hoàn chỉnh trên AWS bằng **Terraform** — Infrastructure as Code (IaC). Ta sẽ khởi tạo VPC với public và private subnets, AWS WAF v2, AWS Amplify Hosting, API Gateway HTTP API, EC2 Auto Scaling Group chạy Node.js, RDS MySQL Multi-AZ, ElastiCache Redis, DynamoDB, và S3 — hoàn toàn bằng code `.tf`. Không thao tác thủ công trên AWS Console. Cuối bài lab, lệnh `terraform destroy` sẽ tự động dọn dẹp toàn bộ tài nguyên.
 
 #### Nội dung
 

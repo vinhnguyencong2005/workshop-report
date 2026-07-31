@@ -58,54 +58,29 @@ We propose an automated **Infrastructure as Code (IaC)** solution built with **T
 
 ---
 
-### 5. Budget Estimation
+### 5. Budget Estimation & Cost Framework
 
-Estimated monthly cost breakdown using the AWS Pricing Calculator (us-east-1 region), projected for **40,000 registered users** (~8,000 DAU, ~7.2M API requests/month, ~2 TB frontend bandwidth/month):
+During the initial proposal phase, precise cloud costs depend on actual user adoption, peak traffic patterns, and chosen resource sizes. Below is a flexible cost estimation framework categorized by architectural tiers and operating scales.
 
-#### Tier 1 — Compute & Load Balancing
+#### Key Cost Drivers
 
-| AWS Service | Configuration Details | Monthly Cost (USD) |
+1. **Compute & Load Balancing (Tier 1)**: EC2 Auto Scaling instances (`t3.medium`/`t4g.small`), Application Load Balancer (ALB), and NAT Gateways.
+2. **Database & Storage (Tier 2)**: Multi-AZ RDS (MySQL), ElastiCache (Redis), DynamoDB (On-Demand), and S3 object storage.
+3. **Security, Delivery & Edge (Tier 3)**: AWS Amplify / CloudFront CDN bandwidth, Regional AWS WAF v2, API Gateway HTTP API, and SSM Interface Endpoints.
+
+#### Estimated Monthly Budget by Operating Scale
+
+| Environment / Scale | Estimated Monthly Range | Key Assumptions & Resource Allocation |
 | :--- | :--- | :--- |
-| **EC2 Auto Scaling** | 2–4 × `t3.medium` instances (avg 2.5 running) | ~$75.92 |
-| **EBS Storage (gp3)** | 30 GB per instance × 2.5 instances | ~$6.00 |
-| **Application Load Balancer** | 1 ALB (fixed + ~2.5 LCU data processing) | ~$31.03 |
-| **NAT Gateways** | 2 NAT Gateways (1/AZ, always-on) + ~50 GB processed | ~$67.95 |
-| **Public IPv4 Addresses** | 4 IPs (2 NAT EIPs + 2 ALB IPs) | ~$14.60 |
-| **VPC Gateway Endpoints** | S3 & DynamoDB (free of charge) | $0.00 |
-| | **Tier 1 Subtotal** | **~$195.50** |
+| **Development / Lab Testing** | **~$0 – $30 / month** | Ephemeral resources provisioned on demand via `terraform apply` and destroyed via `terraform destroy` when inactive. Fits mostly within AWS Free Tier. |
+| **Staging / Small Production** | **~$150 – $350 / month** | Single-AZ / minimal Multi-AZ setup (`t4g.micro` instances), reduced NAT Gateway footprint, and moderate CDN traffic (<500 GB/month). |
+| **Full Production Scale** | **~$500 – $800 / month** | Multi-AZ high availability (~8,000 DAU, 40,000 registered users), auto-scaling compute (2–4 instances), full WAF protection, and ~2 TB CDN bandwidth. |
 
-#### Tier 2 — Database & Storage
+#### Cost Control & Optimization Strategies
 
-| AWS Service | Configuration Details | Monthly Cost (USD) |
-| :--- | :--- | :--- |
-| **RDS MySQL Multi-AZ** | `db.t4g.micro`, 20 GB gp3 storage, 7-day backup | ~$25.66 |
-| **ElastiCache Redis** | `cache.t4g.micro`, 2-node (primary + replica) | ~$23.36 |
-| **DynamoDB (5 tables)** | On-Demand, PITR enabled (~12M writes + 48M reads/month) | ~$15.75 |
-| **Amazon S3** | 3 private buckets, ~20 GB storage | ~$1.50 |
-| | **Tier 2 Subtotal** | **~$66.27** |
-
-#### Tier 3 — Security, Frontend Hosting & Monitoring
-
-| AWS Service | Configuration Details | Monthly Cost (USD) |
-| :--- | :--- | :--- |
-| **AWS WAF v2 (Regional)** | 1 Web ACL + 3 Managed Rule Groups + 1 Rate Limit rule + 7.2M requests | ~$13.32 |
-| **AWS Amplify Hosting** | React/Vite SPA, ~2,000 GB bandwidth @ $0.15/GB | ~$300.00 |
-| **API Gateway HTTP API** | 7.2M requests @ $1.00/1M | ~$7.20 |
-| **VPC Interface Endpoints (SSM)** | 3 endpoints × 2 AZs = 6 ENIs @ $0.01/hr | ~$43.80 |
-| **CloudWatch** | 3 alarms + ~10 GB log ingestion | ~$5.30 |
-| **IAM** | Roles & Policies | $0.00 |
-| | **Tier 3 Subtotal** | **~$369.62** |
-
-#### Total Estimated Monthly Cost
-
-| | Monthly Cost (USD) |
-| :--- | :--- |
-| Tier 1 — Compute & Load Balancing | $195.50 |
-| Tier 2 — Database & Storage | $66.27 |
-| Tier 3 — Security, Frontend & Monitoring | $369.62 |
-| **Total Estimated Cost** | **~$631.39 / month** |
-
-*Note: The largest cost driver is Amplify Hosting bandwidth (~$300, 47.5% of total). Switching to CloudFront + S3 static hosting can reduce bandwidth cost to ~$170/month. Compute Savings Plans and Reserved Instances for EC2/RDS/Redis can further reduce costs by 30–50%. During workshop testing, costs can be minimized to near $0 by tearing down resources via `terraform destroy`.*
+- **Bandwidth Optimization**: Utilizing AWS CloudFront + S3 static hosting as an alternative to Amplify Hosting can reduce CDN data transfer costs by up to 45%.
+- **Savings Plans & Reserved Instances**: Committing to 1-year or 3-year Compute Savings Plans for EC2, RDS, and ElastiCache provides 30%–50% cost savings for steady-state production workloads.
+- **Automated Resource Teardown**: In non-production environments, Terraform automation enables `terraform destroy` after testing sessions to eliminate idle instance charges.
 
 ---
 
