@@ -75,7 +75,3 @@ After `terraform apply`, the ALB DNS name is available as:
 terraform output backend_api_url
 # http://main-alb-123456789.us-east-1.elb.amazonaws.com
 ```
-
----
-
-✅ **Next:** [Monitoring](5.6-monitoring/) — CloudWatch alarms for ALB errors, RDS CPU, and ASG health.

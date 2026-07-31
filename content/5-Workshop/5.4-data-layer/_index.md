@@ -27,5 +27,3 @@ Everything sits in private DB subnets except S3 (regional service) and DynamoDB 
 3. [ElastiCache Redis](5.4.3-redis/) — 2-node replication, encryption at-rest + in-transit
 4. [DynamoDB & VPC Endpoint](5.4.4-dynamodb/) — Five tables with GSIs, on-demand billing
 5. [AWS Amplify Hosting](5.4.5-amplify/) — Hosts React/Vite web application with automated SSL and global CDN
-
----

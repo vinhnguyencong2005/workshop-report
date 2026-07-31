@@ -92,11 +92,3 @@ Bạn cũng có thể khởi chạy deploy thủ công bất kỳ lúc nào tr�
 
 ![frontend UI](/images/workshop/5.8/5.png)
 ![backend health](/images/workshop/5.8/6.png)
-
----
-
-#### Tóm tắt bài học
-
-- **Phát hành Frontend Tự động**: AWS Amplify build và deploy bản cập nhật tự động mỗi khi `git push`.
-- **Zero-Downtime Rolling Update**: ASG thay thế các máy chủ backend êm ái mà không gây gián đoạn.
-- **Kích hoạt linh hoạt**: Hỗ trợ cả kích hoạt tự động qua `push` và kích hoạt thủ công qua `workflow_dispatch`.

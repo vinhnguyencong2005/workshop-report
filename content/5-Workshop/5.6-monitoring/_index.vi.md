@@ -105,3 +105,5 @@ Cấu hình `treat_missing_data = "breaching"` — ngược lại với hai cả
 - **ALB 5xx** — Phát hiện lỗi mã nguồn ứng dụng, thất bại khi triển khai code, hoặc dịch vụ phụ thuộc bị gián đoạn.
 - **RDS CPU** — Phát hiện hiệu năng truy vấn kém, thiếu chỉ mục (index), hoặc lưu lượng truy cập tăng đột biến.
 - **ASG below min** — Phát hiện lỗi khởi tạo máy chủ, gián đoạn tại một AZ, hoặc thiếu hụt dung lượng máy chủ.
+
+Mỗi cảnh báo bao phủ một loại sự cố khác nhau. Chúng kết hợp tạo nên tín hiệu đủ rõ ràng để nhận biết thời điểm cần kiểm tra mà không gây nhiễu.

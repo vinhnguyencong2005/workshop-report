@@ -70,7 +70,6 @@ resource "aws_s3_bucket_public_access_block" "frontend" {
 
 Full `block_public_*` enabled — public access is blocked. Frontend static assets are served securely via **AWS Amplify Hosting**.
 
-
 #### Uploads Bucket
 
 Users upload files through the app. Private, encrypted, versioned, with CORS for browser uploads:
