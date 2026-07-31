@@ -38,3 +38,14 @@ During my internship, I participated in three FCAJ community events. Each one wa
 &emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
 
 &emsp;**Role:** Attendee  
+
+---
+
+### [Event 4](4.4-Event4/)  
+&emsp;**Event Name:** Agentic AI Build Week (AABW) & One Team Community Day: Building and Mastering AI Solutions on AWS  
+
+&emsp;**Date & Time:** 09:00, July 25, 2026  
+
+&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+
+&emsp;**Role:** Attendee  

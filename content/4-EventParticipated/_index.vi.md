@@ -39,3 +39,13 @@ Trong quá trình thực tập, em đã tham gia 3 events của cộng đồng F
 
 &emsp;**Vai trò:** Người tham dự
 
+
+### [Sự kiện 4](4.4-Event4/)
+&emsp;**Tên sự kiện:** Agentic AI Build Week (AABW) & One Team Community Day: Hành trình sáng tạo và làm chủ giải pháp AI trên AWS
+
+&emsp;**Thời gian:** 09:00 sáng ngày 25/07/2026
+
+&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+
+&emsp;**Vai trò:** Người tham dự
+
