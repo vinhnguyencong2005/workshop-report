@@ -87,8 +87,8 @@ The practical demonstrations—especially around Docker containerization, ML-dri
 
 ### Event Photos & Evidence
 
+Although the attendance status in the record image above indicates "Absent", I was present for the entire event session. The status was logged as absent because I accidentally missed the physical check-in step with the security guard at the venue's entrance gate upon arrival.
+
 ![Event 1 Session Photo](/images/4-EventParticipated/4.1-Event1/Event1_.png)
 
 ![Event 1 Attendance Record](/images/4-EventParticipated/4.1-Event1/Event1.2_.png)
-
-> **Note on Attendance Record:** Although the attendance status in the record image above indicates "Absent", I was present for the entire event session. The status was logged as absent because I accidentally missed the physical check-in step with the security guard at the venue's entrance gate upon arrival.
