@@ -26,7 +26,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From June 15, 2026 to August 14, 2026
 
-![Your profile picture](/images/avatar.png)
+<img src="/images/avatar.png" width="180" style="max-width: 200px; height: auto; border-radius: 10px; margin: 15px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" alt="Avatar" />
 
 ### Report Content
 
