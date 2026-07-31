@@ -9,9 +9,9 @@ pre: " <b> 4.3. </b> "
 
 ### Mục đích của sự kiện
 
-- **AgenticOps for Cloud:** Tự động hóa vận hành, FinOps & Security trên AWS nhờ AI.
-- **Production Voice AI:** Bí quyết xây dựng & mở rộng Trợ lý giọng nói quy mô lớn.
-- **AWS DevOps Agent:** Giải mã "Trợ lý AI 24/7" đồng hành cùng kỹ sư vận hành.
+- **AgenticOps for Cloud:** Tự động hóa công tác vận hành, tối ưu chi phí (FinOps) và giám sát bảo mật hệ thống AWS bằng tác nhân AI.
+- **Production Voice AI:** Làm chủ phương pháp kiến trúc để xây dựng và mở rộng hệ thống Trợ lý giọng nói quy mô doanh nghiệp.
+- **AWS DevOps Agent:** Ứng dụng trợ lý AI vận hành 24/7 nhằm nâng cao năng suất làm việc cho đội ngũ kỹ sư Cloud.
 
 ### Danh sách diễn giả
 
@@ -26,73 +26,73 @@ pre: " <b> 4.3. </b> "
 
 #### Chia sẻ từ anh Steve Trần
 
-- Việc thực thi thực tế (POC, MVP, Production) quan trọng hơn nhiều so với lập kế hoạch trên lý thuyết.
-- Giải bài toán thực từ khách hàng lớn (Customer Champions): Startup sống sót bằng cách hợp tác với các đối tác lớn (như F88, FPT) để lấy bài toán kinh doanh thực tế làm gốc, từ đó áp dụng công nghệ vào đúng nhu cầu thị trường.
-- Tư duy về Multi-Agent (Đa tác nhân): Dùng model nhỏ cho việc dễ, dành model mạnh cho agent chính & Chia nhỏ công việc cho các agent chuyên biệt giúp tránh loãng ngữ cảnh, sau đó tổng hợp lại cho agent chính xử lý.
+- Đề cao năng lực thực thi thực tế (POC, MVP và triển khai Production) thay vì chỉ dừng lại ở các kế hoạch lý thuyết.
+- Phương pháp giải bài toán thực tế cho khách hàng lớn (Customer Champions): Các startup phát triển bền vững bằng cách hợp tác với các đối tác lớn (như F88, FPT), lấy bài toán kinh doanh thực làm gốc để đưa công nghệ vào đúng nhu cầu thị trường.
+- Tư duy thiết kế Multi-Agent (Đa tác nhân): Phân bổ mô hình nhỏ xử lý các tác vụ cơ bản, dành mô hình lớn cho agent điều phối chính; chia nhỏ bài toán cho các agent chuyên biệt để tránh loãng ngữ cảnh trước khi tổng hợp kết quả.
 
 #### Chủ đề về Voice AI
 
-- Kiến trúc tối ưu cho tiếng Việt: Sử dụng mô hình 3 thành phần thay vì Speech-to-Speech, giúp kiểm soát nội dung tốt hơn và dễ dàng kết nối hệ thống (tool calling).
-- Thách thức đặc thù ngôn ngữ & văn hóa: Dữ liệu hạn chế, Trải nghiệm giao tiếp và Giọng vùng miền.
-- Vận hành thực tế Voice AI trong doanh nghiệp.
+- Kiến trúc tối ưu cho ứng dụng tiếng Việt: Triển khai mô hình 3 thành phần (STT → LLM → TTS) thay vì Speech-to-Speech, giúp kiểm soát nội dung chặt chẽ và dễ dàng tích hợp gọi hàm hệ thống (tool calling).
+- Giải quyết các thách thức đặc thù ngôn ngữ: Xử lý bài toán dữ liệu huấn luyện hạn chế, tối ưu trải nghiệm hội thoại tự nhiên và sự đa dạng giọng nói vùng miền.
+- Quy trình đưa hệ thống Voice AI vào vận hành thực tế tại các doanh nghiệp.
 
 #### Chủ đề về DevOps Agent
 
-- Đóng vai trò trợ lý tự động hóa giúp kỹ sư DevOps/SRE rút ngắn thời gian xử lý sự cố (MTTR) từ vài giờ xuống vài phút bằng cách phân tích log và tự động tìm nguyên nhân gốc rễ (root cause).
-- Nắm vững 6 trụ cột cốt lõi: Học hỏi cấu trúc hệ thống (Context Learning via Agent Space), mở rộng kết nối qua giao thức MCP, phối hợp đa kênh, cài đặt nhanh gọn trên AWS Console và kiểm soát ngân sách nhờ mô hình tính phí theo runtime.
-- Hiệu quả thực tế & Ranh giới an toàn: Giúp các tổ chức thực tế giảm từ 75% – 77% thời gian điều tra sự cố. Nguyên tắc vận hành bắt buộc là AI chỉ đóng vai trò đề xuất, con người luôn là bên phê duyệt và thực thi cuối cùng.
+- Vai trò trợ lý tự động hóa giúp kỹ sư DevOps và SRE rút ngắn thời gian xử lý sự cố (MTTR) từ nhiều giờ xuống còn vài phút nhờ khả năng tự động phân tích nhật ký (logs) và xác định nguyên nhân gốc rễ.
+- 6 trụ cột vận hành cốt lõi: Tiếp thu cấu trúc hệ thống (Context Learning qua Agent Space), mở rộng kết nối bằng giao thức MCP, phối hợp đa kênh, cài đặt nhanh trên AWS Console và tối ưu ngân sách theo mô hình runtime.
+- Hiệu quả triển khai & Nguyên tắc an toàn: Giúp các tổ chức thực tế giảm từ 75% đến 77% thời gian điều tra sự cố. Nguyên tắc vận hành bắt buộc là AI chỉ đưa ra đề xuất, con người giữ quyền duyệt và thực thi cuối cùng.
 
 #### HR trong thời đại trí tuệ nhân tạo lên ngôi
 
-- Thách thức cốt lõi của HR: Thao tác thủ công cồng kềnh (đọc CV, đánh giá cảm tính), nguy cơ làm lộ thông tin nhạy cảm khi dùng AI công cộng và gánh nặng công việc dễ gây kiệt sức (burnout).
-- Tìm hiểu về Amazon Q (AI Agentic) và cách dịch vụ hỗ trợ các anh chị HR.
+- Nhận diện các điểm nghẽn trong công tác nhân sự truyền thống: Quy trình lọc CV thủ công, đánh giá ứng viên cảm tính, rủi ro bảo mật dữ liệu khi dùng AI công cộng và tình trạng kiệt sức trong công việc.
+- Ứng dụng Amazon Q Business (Agentic AI) để tự động hóa quy trình tuyển dụng và hỗ trợ phòng nhân sự bảo mật thông tin nội bộ.
 
 ### Những gì học được
 
-- **AgenticOps:** AI không chỉ là công cụ hỗ trợ, mà còn có thể trở thành "đồng đội" tự động hóa vận hành, tối ưu chi phí và bảo mật hệ thống Cloud.
-- **Voice AI:** Xây dựng trợ lý giọng nói cho tiếng Việt đòi hỏi kiến trúc đặc thù, giải quyết bài toán dữ liệu hạn chế và trải nghiệm giao tiếp tự nhiên.
-- **DevOps Agent:** Tự động hóa tìm nguyên nhân gốc rễ giúp giảm MTTR từ vài giờ xuống vài phút, nhưng con người luôn là người ra quyết định cuối cùng.
-- **AI & HR:** Amazon Q giúp giảm tải thao tác thủ công, bảo vệ thông tin nhạy cảm và ngăn ngừa burnout cho đội ngũ nhân sự.
+- **AgenticOps:** Trí tuệ nhân tạo không chỉ dừng lại ở vai trò công cụ hỗ trợ mà có thể đảm nhận vị trí một "đồng đội" tự động hóa vận hành, quản lý chi phí và bảo mật hệ thống Cloud.
+- **Voice AI:** Xây dựng trợ lý giọng nói tiếng Việt hiệu quả cần mô hình 3 thành phần chuyên biệt để xử lý tốt rào cản dữ liệu và giọng nói vùng miền.
+- **DevOps Agent:** Tự động hóa chẩn đoán nguyên nhân sự cố giúp giảm MTTR đáng kể, nhưng con người luôn giữ vai trò phê duyệt cuối cùng.
+- **AI & HR:** Các giải pháp AI doanh nghiệp như Amazon Q giúp cắt giảm thao tác thủ công, bảo vệ dữ liệu nhạy cảm và nâng cao hiệu suất làm việc.
 
 ### Ứng dụng vào công việc
 
-- **AgenticOps:** Áp dụng multi-agent để tự động hóa giám sát, cảnh báo và tối ưu chi phí vận hành hệ thống trên AWS.
-- **Voice AI:** Nghiên cứu mô hình 3 thành phần cho các ứng dụng giọng nói tiếng Việt, ưu tiên kiểm soát nội dung và tích hợp tool calling.
-- **DevOps Agent:** Tích hợp AI Agent vào pipeline DevOps để rút ngắn thời gian xử lý sự cố, đồng thời thiết lập cơ chế phê duyệt bởi con người.
-- **Amazon Q for HR:** Ứng dụng Amazon Q Business để tự động hóa quy trình tuyển dụng, sàng lọc CV và bảo vệ dữ liệu nhạy cảm.
+- **AgenticOps:** Triển khai các hệ thống Multi-Agent để tự động hóa giám sát, phát hiện cảnh báo và tối ưu chi phí hạ tầng trên AWS.
+- **Voice AI:** Áp dụng mô hình 3 thành phần cho các ứng dụng giọng nói tiếng Việt, tập trung vào kiểm soát nội dung và tích hợp gọi API tự động.
+- **DevOps Agent:** Tích hợp AI Agent vào luồng CI/CD và giám sát sự cố để rút ngắn thời gian phản hồi, đồng thời duy trì cơ chế phê duyệt của con người.
+- **Amazon Q for HR:** Ứng dụng Amazon Q Business để tự động hóa quy trình sàng lọc hồ sơ tuyển dụng và bảo vệ thông tin doanh nghiệp.
 
 ### Trải nghiệm tại sự kiện
 
-Sự kiện lần này thực sự mở ra một chân trời mới về cách AI đang định hình lại ngành công nghệ và doanh nghiệp. Từ AgenticOps, Voice AI đến DevOps Agent — mỗi chủ đề đều mang tính thực chiến cao và truyền cảm hứng mạnh mẽ.
+Sự kiện đã mang lại nhiều góc nhìn mới về xu hướng ứng dụng Agentic AI trong vận hành hạ tầng đám mây và hoạt động doanh nghiệp:
 
 #### Học hỏi từ các diễn giả có chuyên môn cao
 
-- Anh Steve Trần chia sẻ tư duy thực tế: thực thi (POC, MVP, Production) quan trọng hơn lập kế hoạch lý thuyết, và Multi-Agent là chìa khóa giải quyết bài toán phức tạp.
-- CEO Trung Vũ (Revve AI) giới thiệu kiến trúc Voice AI 3 thành phần tối ưu cho tiếng Việt, vượt qua thách thức về dữ liệu và giọng vùng miền.
+- Tiếp thu tư duy thực thi thực tế từ anh Steve Trần với định hướng tập trung vào MVP/Production và thiết kế hệ thống Đa tác nhân (Multi-Agent).
+- Học hỏi phương pháp triển khai Voice AI sản xuất cho tiếng Việt từ CEO Trung Vũ (Revve AI), giải quyết triệt để bài toán dữ liệu và giọng vùng miền.
 
 #### Trải nghiệm kỹ thuật thực tế
 
-- DevOps Agent phân tích log và tự động tìm root cause, giúp giảm 75-77% thời gian điều tra sự cố — một con số ấn tượng cho thấy tiềm năng thực sự của AI trong vận hành.
-- Khám phá 6 trụ cột của DevOps Agent, từ Context Learning đến MCP protocol và runtime-based billing.
+- Quan sát cách DevOps Agent phân tích dữ liệu log để tự động tìm nguyên nhân gốc rễ, giúp rút ngắn 75-77% thời gian điều tra sự cố.
+- Tìm hiểu 6 trụ cột cốt lõi của DevOps Agent, từ Context Learning đến giao thức MCP và mô hình chi phí runtime.
 
 #### Ứng dụng công cụ hiện đại
 
-- Tiếp cận Amazon Q như một giải pháp Agentic AI toàn diện cho doanh nghiệp, từ DevOps đến HR.
-- Hiểu cách triển khai Voice AI production-ready với kiến trúc pipeline: STT → LLM → TTS.
+- Đánh giá Amazon Q như một giải pháp Agentic AI toàn diện cho doanh nghiệp, ứng dụng linh hoạt từ kỹ thuật đến quản trị nhân sự.
+- Nắm vững kiến trúc pipeline triển khai Voice AI production với các bước: STT → LLM → TTS.
 
 #### Kết nối và trao đổi
 
-- Giao lưu với cộng đồng AWS Community Builder và các chuyên gia Cloud, mở rộng mạng lưới chuyên môn.
-- Chia sẻ góc nhìn về tương lai AI trong doanh nghiệp Việt Nam.
+- Mở rộng giao lưu với cộng đồng AWS Community Builder và các kỹ sư Cloud hàng đầu.
+- Trao đổi góc nhìn thực tế về lộ trình triển khai tác nhân AI tại các doanh nghiệp Việt Nam.
 
 #### Bài học rút ra
 
-- AI đang chuyển từ vai trò "công cụ" sang "đồng đội" trong mọi lĩnh vực: vận hành, phát triển sản phẩm và quản trị nhân sự.
-- Để làm chủ AI, cần kết hợp giữa kiến thức nền tảng vững chắc và tư duy thực tế, giải quyết đúng bài toán của doanh nghiệp.
-- Nguyên tắc "Human-in-the-loop" là ranh giới an toàn không thể thiếu khi triển khai AI Agent trong môi trường production.
+- AI đang dịch chuyển từ công cụ hỗ trợ thành tác nhân phối hợp trực tiếp trong các quy trình vận hành và quản trị.
+- Việc làm chủ AI đòi hỏi sự kết hợp giữa nền tảng kỹ thuật vững chắc và tư duy giải quyết đúng bài toán kinh doanh.
+- Duy trì cơ chế phê duyệt "Human-in-the-loop" là nguyên tắc an toàn bắt buộc khi đưa AI Agent vào môi trường sản xuất.
 
 ### Hình ảnh minh chứng
 
-![Event 3 - 1](/images/4-EventParticipated/4.3-Event3/Event3-1.png)
+![Event 3 - 1](/images/4-EventParticipated/4.3-Event3/Event3-1_.png)
 
-![Event 3 - 2](/images/4-EventParticipated/4.3-Event3/Event3-2.jpg)
+![Event 3 - 2](/images/4-EventParticipated/4.3-Event3/Event3-2_.jpg)

@@ -87,8 +87,8 @@ Những phần demo trực tiếp—đặc biệt là công nghệ Docker, bảo
 
 ### Hình ảnh minh chứng
 
-![Hình ảnh tham gia sự kiện 1](/images/4-EventParticipated/4.1-Event1/Event1.png)
+![Hình ảnh tham gia sự kiện 1](/images/4-EventParticipated/4.1-Event1/Event1_.png)
 
-![Bảng ghi nhận điểm danh sự kiện 1](/images/4-EventParticipated/4.1-Event1/Event1.2.png)
+![Bảng ghi nhận điểm danh sự kiện 1](/images/4-EventParticipated/4.1-Event1/Event1.2_.png)
 
 > **Ghi chú về điểm danh:** Mặc dù hệ thống ghi nhận trạng thái điểm danh ở hình trên là "Vắng mặt" (Absent), thực tế em đã tham dự đầy đủ toàn bộ thời lượng sự kiện. Lý do hiển thị vắng mặt là do khi đến nơi, em đã vô tình bỏ lỡ bước check-in với nhân viên bảo vệ tại cổng ra vào.
