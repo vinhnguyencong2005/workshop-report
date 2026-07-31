@@ -13,7 +13,7 @@ includeInReport: false
 |-----------|-------|----------|
 | 🖥️ **Frontend** | Giao diện người dùng | [TTNT-frontend](https://github.com/vinhnguyencong2005/TTNT-frontend) |
 | ⚙️ **Backend** | API & xử lý nghiệp vụ | [TTNT-backend](https://github.com/vinhnguyencong2005/TTNT-backend) |
-| ☁️ **Hạ tầng AWS** | Thiết lập cloud infrastructure | *(đang cập nhật)* |
+| ☁️ **Hạ tầng AWS** | Thiết lập cloud infrastructure | [TTNT-IaC](https://github.com/vinhnguyencong2005/TTNT-IaC) |
 
 ### Video demo
 

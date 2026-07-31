@@ -5,7 +5,7 @@ weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
-# Summary Report: "FCAJ Community Day June 2026: Experience-sharing session on a comprehensive topic"
+# Summary Report: "FCAJ Community Day June 2026: Experience-Sharing Session on Integrated Tech Topics"
 
 ### Event Objectives
 
@@ -16,96 +16,79 @@ pre: " <b> 4.1. </b> "
 - **Community Connection:** Engage in interactive activities to foster and enhance teamwork skills.
 - **Scale AI Solutions:** Discover how to integrate Amazon Bedrock with Amazon Neptune to build next-generation GraphRAG applications.
 
-### Speakers
+### Guest Speakers
 
-- **Huynh Nguyen Quoc Bao:** Junior Cloud Native Developer - Endava Vietnam; Founder / Head Lab - ITea Lab.
-- **Le Hoang Gia Dai:** Senior student of Ho Chi Minh City University of Technology (HUTECH).
-- **Tran Trung Vinh:** System administrator at Central Retail Group.
-- **Nguyen Quoc Bao:** Studying at Swinburne University of Technology.
-- **Truong Huy Phuoc:** NULL
-- **Viet Phat:** Studying AI Major at Swinburne University of Technology.
+- **Huynh Nguyen Quoc Bao:** Junior Cloud Native Developer at Endava Vietnam; Founder & Lab Lead at ITea Lab.
+- **Le Hoang Gia Dai:** Senior Student at Ho Chi Minh City University of Technology (HUTECH).
+- **Tran Trung Vinh:** System Administrator at Central Retail Group.
+- **Nguyen Quoc Bao:** Student at Swinburne University of Technology.
+- **Truong Huy Phuoc:** Speaker & Tech Community Contributor.
+- **Viet Phat:** AI Student at Swinburne University of Technology.
 
-### Key Highlights
+### Highlights & Topic Overviews
 
-#### Docker Fundamentals
+#### 1. Docker Fundamentals & Containerization
+- Core architectural concepts and why Docker became an essential industry standard.
+- Key advantages of lightweight containers over traditional Virtual Machines (VMs).
+- Practical workflow, essential commands, and a live demonstration of a containerized application.
 
-- Core concepts & why Docker has become a modern industry standard.
-- Key advantages of Docker over Virtual Machines (VMs).
-- Real-world applications, essential commands, and a live containerized app demo.
+#### 2. Advanced Threat Defense: Boosting AWS WAF with Machine Learning
+- Addressing limitations in static, rule-based AWS WAF protection when dealing with novel attack vectors.
+- Machine Learning workflow: Dataset curation, model evaluation, and training pipelines.
+- Deploying ML models alongside AWS WAF to detect and block zero-day threats in real time.
 
-#### Enhancing AWS WAF with Machine Learning
+#### 3. Career Advancement: From IT Helpdesk to SysAdmin
+- Insights on entering and excelling in the tech industry via unconventional paths.
+- Strategic steps and key skills required to successfully pivot into System Administration.
+- Perspectives on modern IT job roles, continuous learning, and professional networking.
 
-- Limitations of traditional AWS WAF relying on predefined rules and "textbook" attack patterns.
-- Machine Learning in action: Selecting suitable datasets and model architectures.
-- Practical steps for leveraging ML to detect and mitigate real-world cyberattacks.
+#### 4. Game Development Unpacked: From Theory to Multiplayer Execution
+- Overview of game engines, architecture patterns, and clean programming practices.
+- Engineering challenges and techniques in multiplayer, real-time game architecture.
+- Hands-on live demonstration of building and running game logic.
 
-#### Career Journey: From IT Support to System Administrator
+#### 5. Teamwork Dynamics & Collaborative Engineering
+- Comparing collaborative mindsets: Teamwork culture in Vietnam vs. Japan.
+- 4 core principles for maximizing productivity and reducing team friction.
+- Recommended tools and workflows to streamline cross-functional collaboration.
 
-- A non-traditional entry into tech without an IT degree.
-- Pivot points to successfully transition into System Administration.
-- Fresh perspectives on job opportunities and career growth in IT.
+#### 6. Building Enterprise GraphRAG with Amazon Bedrock & Neptune
+- Fundamentals of Retrieval-Augmented Generation (RAG) and its structural limitations with unstructured text.
+- Overcoming RAG bottlenecks using GraphRAG and Knowledge Graphs for complex document reasoning.
 
-#### Game Development Demystified: It's Only Hard Until You Explore It
+### Key Insights & Lessons Learned
 
-- Overview of game genres and optimal programming methodologies.
-- In-depth analysis of multiplayer game development techniques.
-- Interactive demo of live game programming.
+#### Operational Efficiency & Consistency
+- Eliminates environment discrepancies ("works on my machine" syndrome). With Docker, applications run predictably across development, testing, and production environments.
+- Default security setups are insufficient. Static WAF rules can be bypassed by subtle attack variations; proactive security requires continuous monitoring and ML-driven detection.
 
-#### Teamwork: Beyond Strategy, It's an Art
+#### Collaboration & Mindset Shift
+- Shift from siloed task execution to active cross-team coordination and strategic communication.
+- Career growth is driven not just by individual technical skills, but by networking, sharing knowledge, and converting concepts into business value.
 
-- Comparing teamwork mindsets and dynamics: Vietnam vs. Japan.
-- 4 golden rules to boost team performance.
-- Recommended infrastructure and tools to foster efficient collaboration.
+#### Pragmatic Engineering & Innovation
+- Lean and efficient code wins. Even complex games or systems start with simple, well-structured foundations.
+- Understanding technical bottlenecks in existing frameworks (like traditional RAG) is essential for adopting superior architectures (like GraphRAG).
 
-#### Building GraphRAG with Amazon Bedrock and Neptune
+### Practical Applications to Work & Projects
 
-- The fundamentals of Retrieval-Augmented Generation (RAG) and its current technical bottlenecks.
-- Breakthrough with GraphRAG: Enhancing knowledge retrieval for Generative AI.
+- **Docker & Containerization:** Package microservices into containers to guarantee cross-environment stability and eliminate dependency mismatches.
+- **ML-Enhanced Security:** Augment AWS WAF rules with Machine Learning models to block unknown and zero-day attack patterns automatically.
+- **AgenticOps & AI Assistance:** Explore AI-driven DevOps assistants to monitor 24/7 cloud health, automate alert triage, and streamline infrastructure maintenance.
+- **GraphRAG Architecture:** Implement Knowledge Graphs via Amazon Neptune and Bedrock for accurate, hallucination-free document retrieval in enterprise AI applications.
+- **Real-Time Networking:** Apply multiplayer game networking patterns to build low-latency, real-time interactive services.
+- **Teamwork Process Standardization:** Structure communication channels and task handoffs to minimize friction in distributed team environments.
 
-### Key Takeaways
+### Personal Event Experience
 
-#### A new direction
+Attending this FCAJ Community Day session was an enriching experience. The speakers delivered a great balance of deep technical implementation details, operational best practices, and career advice. 
 
-- Completely eliminate the story of "it works on my machine but fails on yours." With Docker, the deployment experience becomes simpler and more consistent than ever - just open the container and run.
-- Don't let the false sense of security from default configurations fool you. AWS WAF or traditional protection layers can be completely bypassed by just a few subtle tweaks from an attacker. Information security demands a proactive mindset and continuous adaptability.
+The practical demonstrations—especially around Docker containerization, ML-driven WAF security, and GraphRAG architectures—provided valuable concepts that I can directly apply to my cloud infrastructure projects.
 
-#### A new perspective
+### Event Photos & Evidence
 
-- Move away from the "mind your own business" mentality toward strategic connection and coordination.
-- Unemployment or stagnation is sometimes not because we lack knowledge, but because we haven't yet learned how to connect, learn, and turn what we have into real value.
+![Event 1 Session Photo](/images/4-EventParticipated/4.1-Event1/Event1.png)
 
-#### A new picture
+![Event 1 Attendance Record](/images/4-EventParticipated/4.1-Event1/Event1.2.png)
 
-- You don't need heavy machinery to get started. Even classic ideas or widely spread games can be initiated from the leanest lines of code if you have the right mindset.
-- No technology is absolutely perfect. Clearly identifying the technical bottlenecks of traditional RAG is the turning point to unlocking the power of GraphRAG in processing complex knowledge.
-
-### Applying to Work
-
-- **Docker & Containerization:** Package applications to ensure smooth execution on any machine without environment errors or operating system differences.
-- **Machine Learning for AWS WAF:** Automatically detect and block emerging cyber attack techniques (Zero-day) that static rule sets haven't yet been updated to handle.
-- **AgenticOps / AWS DevOps Agent:** An AI-powered assistant that autonomously monitors Cloud systems 24/7 and alerts/handles infrastructure incidents on behalf of humans.
-- **GraphRAG (Bedrock + Neptune):** An AI-powered assistant for enterprise document retrieval, capable of connecting complex data into accurate answers without hallucinating information.
-- **Multiplayer Game Programming:** Build a connection infrastructure that enables multiple players to interact with each other in the same game room in real time.
-- **Teamwork Skills:** Standardize work coordination processes to minimize conflicts and accelerate project handoffs in multinational companies.
-
-### Event Experience
-
-Just wrapped up an incredible session at the event. I am genuinely energized by the practical, hands-on insights shared by our speakers. The event delivered a fantastic mix of deep-tech engineering concepts and fresh perspectives on operations, teamwork, and career growth.
-
-Here are some of the most valuable takeaways I gathered from the sessions:
-
-#### On Technology & Operations
-
-- **Docker Fundamentals:** The true power of containerization goes beyond just packaging code — it completely eliminates the classic "it works on my machine" dilemma by standardizing environments.
-- **Enhancing AWS WAF with ML:** A wake-up call that static rules are no longer enough against sophisticated, evolving cyberattacks. Integrating Machine Learning is becoming essential for catching real-world zero-day threats automatically.
-- **AgenticOps & AWS DevOps Agent:** A glimpse into the future with an always-on "AI operations teammate" that assists with cloud infrastructure management, incident handling, and FinOps optimization.
-- **GraphRAG (Bedrock + Neptune):** Breaking past the limitations of traditional RAG by combining Knowledge Graphs to drastically improve complex enterprise data retrieval and reduce hallucinations.
-
-#### On People & Growth
-
-- **Teamwork Dynamics:** Appreciating cultural differences in collaboration and learning the four golden rules to maximize team efficiency in multi-cultural environments.
-- **Career Journey:** An inspiring story from IT Support to System Administrator. It made me realize that unemployment or career stagnation isn't always about a lack of knowledge, but rather how we connect, learn, and apply what we already have into real value.
-
-### Event Photos
-
-![Event 1](/images/4-EventParticipated/4.1-Event1/Event1.png)
+> **Note on Attendance Record:** Although the attendance status in the record image above indicates "Absent", I was present for the entire event session. The status was logged as absent because I accidentally missed the physical check-in step with the security guard at the venue's entrance gate upon arrival.

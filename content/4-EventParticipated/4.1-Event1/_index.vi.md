@@ -5,9 +5,9 @@ weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
-# Bài thu hoạch "Ngày hội cộng đồng FCAJ (Tháng 6/2026): Buổi chia sẻ kinh nghiệm với đề tài tổng hợp"
+# Bài thu hoạch: "Ngày hội cộng đồng FCAJ (Tháng 6/2026) - Buổi chia sẻ chuyên đề công nghệ tổng hợp"
 
-### Mục đích của sự kiện
+### Mục tiêu sự kiện
 
 - **Nắm vững nền tảng:** Hiểu rõ tổng quan và ứng dụng thực tế của Docker trong triển khai hệ thống.
 - **Nâng cấp bảo mật:** Học cách ứng dụng Học Máy (Machine Learning) kết hợp AWS WAF để chủ động ngăn chặn các cuộc tấn công mạng.
@@ -16,96 +16,79 @@ pre: " <b> 4.1. </b> "
 - **Gắn kết cộng đồng:** Tham gia các hoạt động tương tác nhằm rèn luyện và nâng cao tinh thần làm việc nhóm.
 - **Mở rộng bài toán AI:** Khám phá cách kết hợp Amazon Bedrock và Amazon Neptune để xây dựng ứng dụng GraphRAG thế hệ mới.
 
-### Danh sách diễn giả
+### Diễn giả tham gia
 
-- **Huỳnh Nguyễn Quốc Bảo:** Lập trình viên phát triển ứng dụng trên nền tảng đám mây (Junior) - Endava Việt Nam; Người sáng lập / Trưởng phòng Nghiên cứu & Phát triển - ITea Lab.
-- **Lê Hoàng Gia Đại:** Sinh viên năm cuối Trường Đại học Công nghệ Thành phố Hồ Chí Minh (HUTECH).
-- **Trần Trung Vinh:** Quản lý hệ thống tại Central Retail Group.
-- **Nguyễn Quốc Bảo:** Sinh viên đang theo học tại Đại học Kỹ thuật Swinburne.
-- **Trương Huy Phước:** NULL
-- **Việt Phát:** Sinh viên đang theo học ngành trí tuệ nhân tạo tại Đại học Kỹ thuật Swinburne.
+- **Huỳnh Nguyễn Quốc Bảo:** Lập trình viên Cloud Native tại Endava Việt Nam; Founder & Lab Lead tại ITea Lab.
+- **Lê Hoàng Gia Đại:** Sinh viên năm cuối Trường Đại học Công nghệ TP.HCM (HUTECH).
+- **Trần Trung Vinh:** Quản trị viên hệ thống tại Central Retail Group.
+- **Nguyễn Quốc Bảo:** Sinh viên Đại học Kỹ thuật Swinburne.
+- **Trương Huy Phước:** Chuyên gia chia sẻ kỹ thuật & đóng góp cộng đồng.
+- **Việt Phát:** Sinh viên chuyên ngành AI tại Đại học Kỹ thuật Swinburne.
 
-### Nội dung nổi bật
+### Nội dung & Điểm nhấn chính
 
-#### Nội dung căn bản của Docker
+#### 1. Căn bản về Docker & Containerization
+- Khái niệm kiến trúc cốt lõi và lý do Docker trở thành tiêu chuẩn trong phát triển phần mềm hiện đại.
+- Ưu điểm vượt trội của container so với mô hình máy ảo (VM) truyền thống.
+- Quy trình vận hành, các lệnh thao tác cơ bản và demo triển khai ứng dụng thực tế.
 
-- Khái niệm cốt lõi & Lý do Docker trở thành chuẩn mực hiện đại.
-- So sánh ưu thế vượt trội của Docker so với Máy ảo (Virtual Machine).
-- Ứng dụng thực tế, các câu lệnh cơ bản & Demo chạy ứng dụng container.
+#### 2. Nâng tầm bảo mật AWS WAF với Machine Learning
+- Nhận diện điểm hạn chế của bộ quy tắc (rules) cố định trên AWS WAF trước các cuộc tấn công mới.
+- Quy trình áp dụng Machine Learning: Thu thập dữ liệu, lựa chọn mô hình và huấn luyện.
+- Phương pháp tích hợp ML để tự động phát hiện và ngăn chặn các mối đe dọa Zero-day theo thời gian thực.
 
-#### Nâng cấp AWS WAF với Học máy
+#### 3. Hành trình sự nghiệp: Từ IT Support đến SysAdmin
+- Chia sẻ kinh nghiệm bước chân vào ngành CNTT từ những lộ trình không chuyên.
+- Các cột mốc và kỹ năng chìa khóa giúp chuyển mình thành công sang vị trí Quản trị hệ thống.
+- Định hình tư duy học tập liên tục và mở rộng cơ hội phát triển nghề nghiệp.
 
-- Nhược điểm của AWS WAF truyền thống khi phụ thuộc vào các luật lệ đã đề ra sẵn và các cuộc tấn công trong "sách giáo khoa".
-- Ứng dụng Machine Learning: Lựa chọn tập dữ liệu huấn luyện & Mô hình phù hợp.
-- Bước đầu ứng dụng Học máy để phát hiện và ngăn chặn tấn công mạng thực tế.
+#### 4. Lập trình Game: Từ lý thuyết đến triển khai Multiplayer
+- Tổng quan về kiến trúc phát triển Game và các nguyên lý lập trình sạch.
+- Phân tích kỹ thuật xử lý kết nối cho các tựa game nhiều người chơi (Multiplayer) thời gian thực.
+- Demo trực quan quá trình viết mã và vận hành logic trò chơi.
 
-#### Hành trình Sự nghiệp: Từ IT Support đến System Admin
+#### 5. Nghệ thuật làm việc nhóm & Phối hợp kỹ thuật
+- So sánh văn hóa và tư duy làm việc nhóm giữa Việt Nam và Nhật Bản.
+- 4 nguyên tắc vàng giúp tối ưu hiệu suất phối hợp và giảm thiểu xung đột.
+- Các công cụ và quy trình chuẩn giúp tăng tốc độ giao tiếp trong dự án.
 
-- Câu chuyện khởi đầu tay ngang không bằng cấp IT.
-- Bước ngoặt chuyển mình thành Cố vấn/Quản trị hệ thống.
-- Góc nhìn mới về cơ hội việc làm & định hướng phát triển ngành IT.
+#### 6. Xây dựng GraphRAG với Amazon Bedrock và Neptune
+- Nguyên lý của RAG (Retrieval-Augmented Generation) và những giới hạn khi xử lý văn bản không cấu trúc.
+- Đột phá của GraphRAG: Sử dụng Đồ thị tri thức (Knowledge Graph) để tăng độ chính xác và giảm thiểu hiện tượng "bịa" thông tin của AI.
 
-#### Lập trình trò chơi không khó, chỉ khó khi bạn không tìm hiểu kỹ
+### Bài học & Đúc kết quan trọng
 
-- Tổng quan các thể loại Game & Phương pháp lập trình tối ưu.
-- Phân tích sâu về kỹ thuật phát triển Game Nhiều người chơi (Multiplayer).
-- Demo trực quan trải nghiệm lập trình Game.
+#### Chuẩn hóa vận hành & Tư duy bảo mật
+- Loại bỏ hoàn toàn sự cố "chạy tốt trên máy tôi nhưng lỗi trên máy production". Docker mang lại môi trường nhất quán từ phát triển đến triển khai.
+- Không thể chủ quan với các cấu hình mặc định. Bảo mật đòi hỏi sự chủ động theo dõi và ứng dụng ML để phát hiện sớm bất thường.
 
-#### Làm việc nhóm không chỉ là chiến lược, nó còn là nghệ thuật
+#### Tư duy phối hợp & Phát triển bản thân
+- Chuyển từ phong cách làm việc đơn lẻ sang chủ động kết nối và phối hợp đa phòng ban.
+- Sự thăng tiến trong công việc phụ thuộc vào khả năng chuyển hóa kiến thức thành giá trị thực tế cho tổ chức.
 
-- So sánh tư duy & phong cách làm việc nhóm: Việt Nam vs. Nhật Bản.
-- 4 quy tắc vàng nâng cao hiệu suất làm việc nhóm.
-- Đề xuất mô hình hạ tầng & công cụ hỗ trợ phối hợp hiệu quả.
+#### Tối ưu kỹ thuật & Đổi mới sáng tạo
+- Khởi tạo hệ thống từ những dòng code tinh gọn và tư duy đúng đắn thay vì lãng phí tài nguyên.
+- Nhận diện đúng điểm nghẽn của công nghệ hiện tại là tiền đề để tiếp cận các giải pháp tiên tiến như GraphRAG.
 
-#### Với Amazon Bedrock và Neptune, ta có thể xây dựng một GraphRAG
+### Ứng dụng thực tế vào công việc
 
-- Bản chất của RAG và những hạn chế kỹ thuật hiện tại.
-- Đột phá với GraphRAG: Giải pháp tối ưu hóa truy xuất tri thức cho trí tuệ nhân tạo.
+- **Đóng gói ứng dụng (Docker):** Chuẩn hóa môi trường chạy dịch vụ, giúp việc bàn giao code giữa các môi trường diễn ra mượt mà.
+- **Tăng cường bảo mật (AWS WAF + ML):** Ứng dụng mô hình học máy để tự động nhận diện và chặn các dạng tấn công lách luật mới.
+- **Giám sát tự động (AgenticOps):** Nghiên cứu các trợ lý AI giúp giám sát hạ tầng đám mây 24/7 và hỗ trợ phản ứng sự cố nhanh chóng.
+- **Truy xuất dữ liệu (GraphRAG):** Áp dụng Amazon Bedrock và Neptune để tra cứu tài liệu doanh nghiệp chính xác, không bị sai lệch dữ liệu.
+- **Xử lý kết nối thời gian thực:** Áp dụng kỹ thuật lập trình game multiplayer vào các ứng dụng cần tương tác thời gian thực.
+- **Chuẩn hóa quy trình làm việc nhóm:** Xây dựng quy trình giao tiếp và bàn giao công việc rõ ràng trong các dự án hợp tác.
 
-### Những gì học được
+### Trải nghiệm cá nhân tại sự kiện
 
-#### Một hướng đi mới
+Buổi chia sẻ FCAJ Community Day đã mang lại cho tôi nhiều trải nghiệm thực sự bổ ích. Các diễn giả đã đem đến sự kết hợp tuyệt vời giữa kiến thức kỹ thuật chuyên sâu và những bài học vận hành thực tế.
 
-- Loại bỏ hoàn toàn câu chuyện "chạy tốt trên máy tôi nhưng lỗi trên máy bạn". Với Docker, trải nghiệm triển khai trở nên đơn giản và đồng nhất hơn bao giờ hết — chỉ cần mở container và vận hành.
-- Đừng để sự an toàn ảo tưởng từ các thiết lập mặc định đánh lừa. AWS WAF hay các lớp bảo vệ truyền thống hoàn toàn có thể bị qua mặt chỉ bởi một vài tinh chỉnh tinh vi từ kẻ tấn công. An toàn thông tin đòi hỏi tư duy chủ động và sự linh hoạt liên tục.
-
-#### Một góc nhìn mới
-
-- Từ bỏ tư duy "việc ai nấy làm" để hướng tới sự kết nối và phối hợp mang tính chiến lược.
-- Thất nghiệp hay giậm chân tại chỗ đôi khi không phải vì chúng ta thiếu kiến thức, mà vì chúng ta chưa biết cách kết nối, học hỏi và biến những gì mình có thành giá trị thực tế.
-
-#### Một bức tranh mới
-
-- Bạn không cần một bộ máy cồng kềnh để bắt đầu. Ngay cả những ý tưởng kinh điển hay trò chơi lan tỏa rộng rãi cũng có thể được khởi tạo từ những dòng code tinh gọn nhất nếu bạn nắm đúng tư duy.
-- Không có công nghệ nào là hoàn hảo tuyệt đối. Nhận diện rõ những điểm nghẽn kỹ thuật của RAG truyền thống chính là bước ngoặt để mở ra sức mạnh của GraphRAG trong việc xử lý tri thức phức tạp.
-
-### Ứng dụng vào công việc
-
-- **Docker & Containerization:** Đóng gói ứng dụng để đảm bảo chạy mượt mà trên mọi máy tính mà không bị lỗi thiếu môi trường hay khác biệt hệ điều hành.
-- **Học máy cho AWS WAF:** Tự động phát hiện và ngăn chặn các chiêu trò tấn công mạng mới (Zero-day) mà các bộ luật cố định chưa kịp cập nhật.
-- **AgenticOps / AWS DevOps Agent:** Trợ lý trí tuệ nhân tạo tự động giám sát hệ thống Cloud 24/7 và cảnh báo/xử lý sự cố hạ tầng thay cho con người.
-- **GraphRAG (Bedrock + Neptune):** Trợ lý trí tuệ nhân tạo tra cứu tài liệu doanh nghiệp, giúp kết nối các dữ liệu phức tạp thành câu trả lời chính xác mà không bị "bịa" thông tin.
-- **Lập trình trò chơi nhiều người chơi:** Xây dựng hạ tầng kết nối giúp nhiều người chơi có thể tương tác với nhau trong cùng một phòng game theo thời gian thực.
-- **Kỹ năng làm việc nhóm:** Chuẩn hóa quy trình phối hợp công việc giúp giảm thiểu xung đột và tăng tốc độ bàn giao dự án trong các công ty đa quốc gia.
-
-### Trải nghiệm trong sự kiện
-
-Trở về từ sự kiện, tôi cảm thấy vô cùng hào hứng với những chia sẻ thực chiến từ các anh/chị diễn giả. Sự kiện không chỉ mang lại kiến thức kỹ thuật chuyên sâu mà còn mở ra nhiều góc nhìn mới về tư duy vận hành và phát triển sự nghiệp.
-
-Dưới đây là những bài học đắt giá nhất mà tôi đúc kết được:
-
-#### Về Công nghệ & Vận hành
-
-- **Docker Fundamentals:** Lợi ích cốt lõi của Docker không chỉ nằm ở tính đóng gói, mà là tư duy chuẩn hóa môi trường - giúp loại bỏ hoàn toàn câu chuyện "chạy tốt trên máy tôi nhưng lỗi trên máy bạn".
-- **Nâng cấp AWS WAF với Machine Learning:** Tỉnh thức trước thực tế rằng các quy tắc cố định (Rules) không còn đủ sức bảo vệ hệ thống trước các kỹ thuật lách luật tinh vi. Tích hợp ML chính là bước đi bắt buộc để tự động chặn các cuộc tấn công Zero-day thực tế.
-- **AgenticOps & AWS DevOps Agent:** Trải nghiệm thực tế về "đồng đội trí tuệ nhân tạo 24/7" giúp tự động hóa vận hành Cloud, từ giám sát hạ tầng đến tối ưu chi phí (FinOps).
-- **GraphRAG (Bedrock + Neptune):** Khai phóng sức mạnh tra cứu tri thức doanh nghiệp phức tạp bằng cách kết hợp Knowledge Graph, giải quyết triệt để hạn chế "bịa" thông tin của RAG truyền thống.
-
-#### Về Con người & Kỹ năng
-
-- **Nghệ thuật Teamwork:** Nhận ra sự khác biệt trong văn hóa phối hợp nhóm và 4 quy tắc vàng để tối ưu hiệu suất làm việc trong môi trường đa quốc gia.
-- **Góc nhìn Sự nghiệp:** Câu chuyện truyền cảm hứng từ IT Support lên System Admin. Vấn đề việc làm đôi khi không nằm ở chỗ chúng ta thiếu kiến thức, mà là chưa biết cách kết nối và vận dụng những gì mình có thành giá trị thực tế.
+Những phần demo trực tiếp—đặc biệt là công nghệ Docker, bảo mật AWS WAF tích hợp ML và giải pháp GraphRAG—đã giúp tôi mở rộng tầm nhìn và có thêm ý tưởng áp dụng trực tiếp vào các dự án hạ tầng đám mây của mình.
 
 ### Hình ảnh minh chứng
 
-![Event 1](/images/4-EventParticipated/4.1-Event1/Event1.png)
+![Hình ảnh tham gia sự kiện 1](/images/4-EventParticipated/4.1-Event1/Event1.png)
+
+![Bảng ghi nhận điểm danh sự kiện 1](/images/4-EventParticipated/4.1-Event1/Event1.2.png)
+
+> **Ghi chú về điểm danh:** Mặc dù hệ thống ghi nhận trạng thái điểm danh ở hình trên là "Vắng mặt" (Absent), thực tế em đã tham dự đầy đủ toàn bộ thời lượng sự kiện. Lý do hiển thị vắng mặt là do khi đến nơi, em đã vô tình bỏ lỡ bước check-in với nhân viên bảo vệ tại cổng ra vào.

@@ -13,7 +13,7 @@ includeInReport: false
 |-----------|-------------|------|
 | 🖥️ **Frontend** | User interface | [TTNT-frontend](https://github.com/vinhnguyencong2005/TTNT-frontend) |
 | ⚙️ **Backend** | API & business logic | [TTNT-backend](https://github.com/vinhnguyencong2005/TTNT-backend) |
-| ☁️ **AWS Infrastructure** | Cloud infrastructure setup | *(updating)* |
+| ☁️ **AWS Infrastructure** | Cloud infrastructure setup | [TTNT-IaC](https://github.com/vinhnguyencong2005/TTNT-IaC) |
 
 ### Video Demo
 
