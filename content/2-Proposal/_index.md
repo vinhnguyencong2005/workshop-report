@@ -74,7 +74,7 @@ During the initial proposal phase, precise cloud costs depend on actual user ado
 | :--- | :--- | :--- |
 | **Development / Lab Testing** | **~$0 – $30 / month** | Ephemeral resources provisioned on demand via `terraform apply` and destroyed via `terraform destroy` when inactive. Fits mostly within AWS Free Tier. |
 | **Staging / Small Production** | **~$150 – $350 / month** | Single-AZ / minimal Multi-AZ setup (`t4g.micro` instances), reduced NAT Gateway footprint, and moderate CDN traffic (<500 GB/month). |
-| **Full Production Scale** | **~$500 – $800 / month** | Multi-AZ high availability (~8,000 DAU, 40,000 registered users), auto-scaling compute (2–4 instances), full WAF protection, and ~2 TB CDN bandwidth. |
+| **Full Production Scale** | **~$500 – $800 / month** | Multi-AZ high availability (~8,000 daily active user, 40,000 registered users), auto-scaling compute (2–4 instances), full WAF protection, and ~2 TB CDN bandwidth. |
 
 #### Cost Control & Optimization Strategies
 

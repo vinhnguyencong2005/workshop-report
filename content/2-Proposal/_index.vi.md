@@ -74,7 +74,7 @@ Trong giai đoạn đề xuất ý tưởng ban đầu, chi phí cloud thực t�
 | :--- | :--- | :--- |
 | **Thử nghiệm / Lab** | **~$0 – $30 / tháng** | Tài nguyên tạm thời được khởi tạo khi cần qua `terraform apply` và xóa bỏ bằng `terraform destroy` khi hoàn thành. Nằm phần lớn trong AWS Free Tier. |
 | **Môi trường Staging / Quy mô Nhỏ** | **~$150 – $350 / tháng** | Cấu hình tối thiểu (`t4g.micro`), tối ưu số lượng NAT Gateway, lưu lượng CDN vừa phải (<500 GB/tháng). |
-| **Quy mô Sản xuất (Production)** | **~$500 – $800 / tháng** | Đáp ứng tính sẵn sàng cao đa AZ (~8,000 DAU, 40,000 sinh viên), tự động co giãn (2–4 instances), bảo mật WAF toàn diện và ~2 TB băng thông CDN. |
+| **Quy mô Sản xuất (Production)** | **~$500 – $800 / tháng** | Đáp ứng tính sẵn sàng cao đa AZ (~8,000 daily active user, 40,000 sinh viên), tự động co giãn (2–4 instances), bảo mật WAF toàn diện và ~2 TB băng thông CDN. |
 
 #### Chiến lược Quản lý & Tối ưu Chi phí
 
