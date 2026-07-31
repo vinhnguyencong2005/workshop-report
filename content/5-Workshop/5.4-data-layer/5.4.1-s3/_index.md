@@ -10,7 +10,7 @@ Three buckets, each with different access patterns:
 
 | Bucket | Security | Key Settings |
 |--------|---------|-------------|
-| Frontend | Public read | Website hosting, bucket policy for `s3:GetObject` |
+| Frontend | Private | Storing build backups and artifacts (Hosting managed by Amplify) |
 | Uploads | Private | SSE-S3 encryption, versioning, CORS (PUT/GET from browser) |
 | Deployments | Private | SSE-S3 encryption, versioning |
 
@@ -115,8 +115,6 @@ resource "aws_s3_bucket_cors_configuration" "uploads" {
   }
 }
 ```
-
-All four `block_public_*` set to `true` — no accidental public exposure. CORS allows the browser to upload directly using pre-signed URLs from the backend.
 
 #### Deployments Bucket
 
