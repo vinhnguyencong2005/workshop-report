@@ -7,11 +7,11 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Hoàng Thông
+&emsp; **Họ và tên:** Nguyễn Công Vinh
 
-&emsp; **Số điện thoại:** 0975099324
+&emsp; **Số điện thoại:** 0946311901
 
-&emsp; **Email:** thong.nguyenkallidus@hcmut.edu.vn
+&emsp; **Email:** vinh.nguyencong@hcmut.edu.vn
 
 &emsp; **Trường:** Trường Đại học Bách khoa, Đại học Quốc gia Thành phố Hồ Chí Minh
 
