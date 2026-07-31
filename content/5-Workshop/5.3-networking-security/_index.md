@@ -13,3 +13,4 @@ pre : " <b> 5.3. </b> "
 3. [Route Tables & NAT Gateways](5.3.3-routes-nat/) — How traffic flows between subnets and the internet
 4. [Security Groups](5.3.4-security-groups/) — Five stateful firewalls with least-privilege rules
 5. [IAM Role for EC2](5.3.5-iam/) — Giving EC2 permission to access AWS services without keys
+6. [AWS WAF v2 (Regional)](5.3.6-waf/) — Web application firewall protecting ALB from OWASP Top 10 and DDoS

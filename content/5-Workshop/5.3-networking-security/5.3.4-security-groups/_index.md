@@ -6,16 +6,6 @@ chapter : false
 pre : " <b> 5.3.4. </b> "
 ---
 
-Five security groups, each with one responsibility:
-
-```
-Internet ──→ [alb-sg] ──→ [ec2-sg] ──→ [rds-sg]
-                           │    │
-                           │    └──→ [redis-sg]
-                           │
-                    [vpce-sg] (SSM endpoints)
-```
-
 #### 1. ALB (`alb-sg`)
 
 The only SG that accepts traffic from the internet:
