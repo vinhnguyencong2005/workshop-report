@@ -7,7 +7,7 @@ pre: " <b> 6. </b> "
 includeInReport: false
 ---
 Trong suốt thời gian thực tập tại **Công ty TNHH Amazon Web Services Viet Nam** từ **01/06/2026** đến **15/08/2026**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.  
-Tôi đã tham gia vào dự án **Làm web quản lý sinh viên** cùng với 2 thành viên khác tên là **Nguyễn Công Vinh** và **Nguyễn Lê Đức Phú**, qua đó cải thiện kỹ năng **Lập trình, kiểm tra, giao tiếp và quản lý thời gian**.  
+Tôi đã tham gia vào dự án **Làm web quản lý sinh viên** cùng với 2 thành viên khác tên là **Nguyễn Hoàng Thông** và **Nguyễn Lê Đức Phú**, qua đó cải thiện kỹ năng **Lập trình, triển khai dự án, giao tiếp và quản lý thời gian**.  
 
 Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân thủ nội quy, và tích cực trao đổi với đồng nghiệp để nâng cao hiệu quả công việc.
 

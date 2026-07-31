@@ -1,6 +1,6 @@
 ---
 title: "Chia sẻ, đóng góp ý kiến"
-date: 2026-07-30
+date: 2024-01-01
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
@@ -32,7 +32,7 @@ Hỗ trợ thời gian làm việc linh hoạt theo lịch học và tạo đi�
 ### 2. Trả lời các câu hỏi chi tiết
 
 * **Điều bạn hài lòng nhất trong thời gian thực tập?**  
-  > Điều mình hài lòng nhất là được giao lưu, học hỏi cùng cộng đồng sinh viên năng động và nhận được sự hướng dẫn sát sao từ mentor, giúp mình tự tin và chủ động hơn rất nhiều.
+  > Điều mình hài lòng nhất là được giao lưu, học hỏi cùng cộng đồng sinh viên năng động và nhận được sự hướng dẫn từ mentor, giúp mình tự tin và chủ động hơn rất nhiều.
 
 * **Điều bạn nghĩ công ty cần cải thiện cho các khóa thực tập sinh tiếp theo?**  
   > Công ty đã hỗ trợ rất tốt. Nếu có thể, công ty nâng số buổi làm việc trực tiếp tại văn phòng trong tuần để thực tập sinh có thêm cơ hội giao lưu và trao đổi trực tiếp với team.
