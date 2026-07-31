@@ -6,14 +6,7 @@ chapter : false
 pre : " <b> 5.5. </b> "
 ---
 
-Ba thành phần phối hợp với nhau để vận hành ứng dụng:
-
-```
-[API Gateway] ──→ [WAF v2] ──→ [ALB] ──→ [ASG: EC2 ×2–4] ──→ [SSM Endpoints]
-                                          │              │
-                                     Launch Template
-                                     (AMI, user data, IAM, EBS)
-```
+Trong phần này, hệ thống triển khai hạ tầng xử lý tính toán và cân bằng tải nhằm đảm bảo ứng dụng Node.js backend hoạt động ổn định, tự động co giãn và an toàn. Các thành phần chính bao gồm:
 
 | Thành phần | Chức năng |
 |-----------|-------------|

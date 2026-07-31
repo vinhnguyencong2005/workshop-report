@@ -6,16 +6,6 @@ chapter : false
 pre : " <b> 5.3.4. </b> "
 ---
 
-Năm security groups, mỗi nhóm đảm nhận một nhiệm vụ riêng biệt:
-
-```
-Internet ──→ [alb-sg] ──→ [ec2-sg] ──→ [rds-sg]
-                           │    │
-                           │    └──→ [redis-sg]
-                           │
-                    [vpce-sg] (SSM endpoints)
-```
-
 #### 1. ALB (`alb-sg`)
 
 Security Group duy nhất chấp nhận lưu lượng truy cập từ Internet:

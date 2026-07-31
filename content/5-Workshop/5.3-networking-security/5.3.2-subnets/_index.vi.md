@@ -10,22 +10,6 @@ pre : " <b> 5.3.2. </b> "
 
 Sáu subnets trải dài trên hai AZs, được tổ chức thành ba tầng. Mỗi tầng có một subnet trên mỗi AZ giúp hệ thống duy trì hoạt động khi một AZ gặp sự cố:
 
-```
-                AZ-1 (us-east-1a)          AZ-2 (us-east-1b)
-               ┌─────────────────┐       ┌─────────────────┐
-   Public      │  10.0.1.0/24    │       │  10.0.2.0/24    │
-               │  public_1       │       │  public_2       │
-               └────────┬────────┘       └────────┬────────┘
-                        │                         │
-   Private App  │  10.0.10.0/24   │       │  10.0.11.0/24   │
-               │  private_1      │       │  private_2      │
-               └────────┬────────┘       └────────┬────────┘
-                        │                         │
-   Private DB   │  10.0.20.0/24   │       │  10.0.21.0/24   │
-               │  private_3      │       │  private_4      │
-               └─────────────────┘       └─────────────────┘
-```
-
 Nếu `us-east-1a` bị gián đoạn, toàn bộ dịch vụ trên `us-east-1b` vẫn tiếp tục hoạt động.
 
 #### Public Subnets — Dành cho ALB và NAT Gateways

@@ -69,6 +69,12 @@ Default output format [None]: json
 #### Clone Repository
 
 ```bash
+# Mã nguồn Hạ tầng Terraform (IaC)
 git clone https://github.com/vinhnguyencong2005/TTNT-IaC
-cd TTNT-IaC
+
+# Mã nguồn ứng dụng Backend Node.js
+git clone https://github.com/vinhnguyencong2005/TTNT-backend
+
+# Mã nguồn ứng dụng Frontend React/Vite
+git clone https://github.com/vinhnguyencong2005/TTNT-frontend
 ```

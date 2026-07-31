@@ -67,7 +67,7 @@ git push origin main
 #### Step 4: Monitor Execution & Verify Deployment
 
 1. Click on the active workflow run in the **Actions** tab to view step-by-step execution logs in real time.
-2. Once the job turns green (✅ **Success**), test your application:
+2. Once the job turns green, test your application:
    - Open your frontend app: `https://main.<app-id>.amplifyapp.com`
    - Test API health: `curl -s https://<api-id>.execute-api.us-east-1.amazonaws.com/health`
 

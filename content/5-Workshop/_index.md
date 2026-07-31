@@ -6,9 +6,6 @@ chapter: false
 pre: " <b> 5. </b> "
 includeInReport: false
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
 # Deploy a Full-Stack LMS on AWS with Terraform
 
