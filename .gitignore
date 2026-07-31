@@ -9,4 +9,4 @@ report/*.fls
 report/*.fdb_latexmk
 report_vn.pdf
 report_en.pdf
-report/form/*.pdf
+!report/form/*.pdf
